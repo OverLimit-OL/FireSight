@@ -1,4 +1,4 @@
-# FireSight frontend
+# Fire-XII frontend
 
 See the [repository README](../README.md) for setup, features, scientific boundaries and the full documentation index.
 

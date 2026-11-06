@@ -168,7 +168,7 @@ export default function Composer({
               ref={input}
               id={`question-${draftId}`}
               name="researchQuestion"
-              placeholder="Ask a question about microgravity combustion…"
+              placeholder="What would you like to investigate in microgravity combustion?"
               value={text}
               maxLength={12000}
               aria-invalid={!!error}

@@ -1,4 +1,4 @@
-# FireSight — proposed frontend/Flask contract
+# Fire-XII — proposed frontend/Flask contract
 
 Simulation Studio now has an implemented bounded adapter: see [Phase 2 client contract](docs/PHASE_2_CLIENT_CONTRACT.md) for actual endpoints, payloads and differences from the broader proposal. No Flask routes are implemented here.
 

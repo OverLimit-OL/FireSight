@@ -206,7 +206,7 @@ export default function Settings() {
       ) : null}
       <div className="settings-about">
         <strong>
-          FireSight<span className="brand-period">.</span>
+          Fire-XII<span className="brand-period">.</span>
         </strong>
         <p>
           Independent scientific research prototype.

@@ -142,11 +142,11 @@ function Sidebar({ close, mobile = false }: { close?: () => void; mobile?: boole
   return (
     <div className={`sidebar-content ${collapsed ? 'is-collapsed' : ''}`}>
       <div className="sidebar-brand">
-        <Link to="/" aria-label="FireSight home" onClick={close}>
+        <Link to="/" aria-label="Fire-XII home" onClick={close}>
           <BrandMark />
           {!collapsed ? (
             <span>
-              FireSight<span className="brand-period">.</span>
+              Fire-XII<span className="brand-period">.</span>
             </span>
           ) : null}
         </Link>
@@ -303,7 +303,7 @@ export default function Shell() {
         ? 'Settings'
         : 'Research workspace'
   useEffect(() => {
-    document.title = `${section} · FireSight`
+    document.title = `${section} · Fire-XII`
     if (lastRoute.current === location.pathname && !location.hash) return
     lastRoute.current = location.pathname
     if (location.hash) {
@@ -360,7 +360,7 @@ export default function Shell() {
             >
               <Menu />
             </Button>
-            <span className="header-brand">FireSight</span>
+            <span className="header-brand">Fire-XII</span>
             <ChevronRight aria-hidden="true" />
             <span>{section}</span>
           </div>
@@ -400,7 +400,7 @@ export default function Shell() {
         </main>
         <footer className="app-footer">
           <span>
-            FireSight <span aria-hidden="true">/</span> Scientific intelligence for space fire
+            Fire-XII <span aria-hidden="true">/</span> Scientific intelligence for space fire
             safety
           </span>
           <span>Provenance before prediction</span>

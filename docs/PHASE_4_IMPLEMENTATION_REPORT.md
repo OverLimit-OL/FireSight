@@ -1,6 +1,6 @@
 # Phase 4 — Implementation and verification
 
-November 1, 2026. Focused frontend redesign of the existing FireSight application. The Phase 4 directive authorizes implementation of this independent prototype; no competition eligibility or validated science is claimed. The historical `AGENTS.md` remains unchanged.
+November 1, 2026. Focused frontend redesign of the existing Fire-XII application. The Phase 4 directive authorizes implementation of this independent prototype; no competition eligibility or validated science is claimed. The historical `AGENTS.md` remains unchanged.
 
 ## Architecture and interaction changes
 

@@ -5,7 +5,7 @@ Historical preflight recorded October 31, 2026, before the user changed the plan
 ## Repository and execution boundary
 
 - Workspace `/home/abdulrahman/Desktop/Fire` was empty at inspection, including no package manifest or source files. No applicable AGENTS.md was found in the workspace or inspected ancestor locations.
-- No prior FireSight memory match was found; no historical project facts were used.
+- No prior Fire-XII memory match was found; no historical project facts were used.
 - Node v24.15.0, npm 11.12.1 and npx were observed. No application dependencies were installed, and no application, backend, AI integration or runnable prototype was created.
 - The user's supplied November 14–15 event dates are later than October 31. Implementation remains deferred. Exact permitted local start time was not established; it must be checked for the chosen event before beginning code.
 

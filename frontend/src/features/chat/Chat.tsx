@@ -56,7 +56,7 @@ function MessageView({
                 F.
               </span>
             )}
-            <strong>{message.role === 'user' ? 'Your question' : 'FireSight research note'}</strong>
+            <strong>{message.role === 'user' ? 'Your question' : 'Fire-XII research note'}</strong>
             {message.generation === 'scripted-demo' ? (
               <Badge variant="outline">Scripted demonstration</Badge>
             ) : null}

@@ -7,7 +7,7 @@ Original architecture plan, now used for implementation. The feature structure, 
 | Candidate | Decision and purpose |
 | --- | --- |
 | React + strict TypeScript + Vite | Standalone client; no SSR or Next.js requirement |
-| Tailwind CSS + official shadcn/ui | Semantic tokens and owned accessible primitive source; custom FireSight variants |
+| Tailwind CSS + official shadcn/ui | Semantic tokens and owned accessible primitive source; custom Fire-XII variants |
 | React Router | Browser routes, nested shell, URL state, not-found handling |
 | Lucide React | Small consistent named icons; decorative icons hidden from assistive technology |
 | Recharts | Lazy-loaded numeric line/scatter views; explicit table equivalent |

@@ -139,7 +139,7 @@ export default function ConfigurationPanel({
           </div>
           <div>
             <dt>Source</dt>
-            <dd>FireSight authored fixture</dd>
+            <dd>Fire-XII authored fixture</dd>
           </div>
           <div>
             <dt>Applicability</dt>

@@ -6,7 +6,7 @@ Low-fidelity planning artifacts, not application screenshots. Labels describe in
 
 ```text
 ┌──────────────────────┬───────────────────────────────────────────────────────┐
-│ FireSight        [«] │ Research workspace                  Demo · local only │
+│ Fire-XII        [«] │ Research workspace                  Demo · local only │
 │                      ├───────────────────────────────────────────────────────┤
 │ [+ New research chat]│                                                       │
 │                      │ Begin with a research question                        │
@@ -36,7 +36,7 @@ Composer stays near the top without a marketing hero. Selecting a question popul
 
 ```text
 ┌──────────────────────┬────────────────────────────────────┬───────────────────┐
-│ FireSight        [«] │ Research / Conversation            │ Evidence      [×] │
+│ Fire-XII        [«] │ Research / Conversation            │ Evidence      [×] │
 │ [+ New research chat]├────────────────────────────────────┤                   │
 │ Home                 │ You                                │ Interpretation    │
 │ Resources            │ How can I compare these studies?   │ Claim text        │
@@ -173,7 +173,7 @@ Destructive action opens a titled confirmation with affected count; confirm/canc
 
 ```text
 ┌──────────────────────────────────┐  ┌──────────────────────────────────┐
-│ [Menu] FireSight       [Theme]    │  │ Evidence                    [×] │
+│ [Menu] Fire-XII       [Theme]    │  │ Evidence                    [×] │
 │ Research workspace               │  │ Interpretation                   │
 │ Demo · local only                │  │ Claim text                       │
 ├──────────────────────────────────┤  │                                  │

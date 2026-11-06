@@ -2,7 +2,7 @@
 
 > Historical planning specification. The user explicitly lifted the timing gate on November 1, 2026. See the [implementation report](PHASE_2_IMPLEMENTATION_REPORT.md) and [actual client contract](PHASE_2_CLIENT_CONTRACT.md) for delivered scope and verification. Statements below about work not yet started describe the earlier planning stage.
 
-Planning artifacts only. No new UI has been implemented. All names, revision/frame labels and panel contents below are schematic interface labels, not NASA measurements or simulated findings. Use the existing FireSight theme tokens and shell.
+Planning artifacts only. No new UI has been implemented. All names, revision/frame labels and panel contents below are schematic interface labels, not NASA measurements or simulated findings. Use the existing Fire-XII theme tokens and shell.
 
 ## Lab overview
 

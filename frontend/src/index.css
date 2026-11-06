@@ -330,6 +330,33 @@
 .app-shell.sidebar-collapsed {
   --sidebar-width: 80px;
 }
+@keyframes placeholder-typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes placeholder-fade {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.research-composer textarea::placeholder {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  animation:
+    placeholder-typing 2s steps(40, end) forwards,
+    placeholder-fade 4s ease-in-out infinite 2s;
+}
+
+@media (max-width: 767px) {
+  .research-composer textarea::placeholder {
+    white-space: normal;
+    display: block;
+    animation: placeholder-fade 4s ease-in-out infinite;
+  }
+}
+
 .desktop-sidebar {
   width: var(--sidebar-width);
   position: fixed;
@@ -337,6 +364,7 @@
   inset-inline-start: 0;
   background: var(--sidebar-bg);
   border-inline-end: 1px solid var(--border);
+  transition: width 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 .sidebar-content {
   display: flex;
@@ -2597,7 +2625,7 @@
   margin-top: 18px;
 }
 .chat-page .research-composer textarea {
-  min-height: 72px;
+  min-height: 60px;
   max-height: 160px;
 }
 .chat-page .research-message:last-child {

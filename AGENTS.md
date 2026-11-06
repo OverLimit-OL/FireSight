@@ -2,7 +2,7 @@
 
 ## Project Status and Timing Boundary
 
-FireSight currently contains planning documents only. Before implementing competition code, verify the selected event’s permitted start time and record its timezone and source. Until then, limit contributions to specifications, wireframes, API contracts, and checklists. Do not scaffold the application or install application dependencies prematurely.
+Fire-XII currently contains planning documents only. Before implementing competition code, verify the selected event’s permitted start time and record its timezone and source. Until then, limit contributions to specifications, wireframes, API contracts, and checklists. Do not scaffold the application or install application dependencies prematurely.
 
 ## Project Structure & Module Organization
 

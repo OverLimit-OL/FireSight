@@ -1,8 +1,8 @@
-# FireSight
+# Fire-XII
 
 **Scientific Intelligence for Space Fire Safety** — an independent, evidence-first research workspace.
 
-FireSight is a standalone React frontend with a fully local demonstration mode. It connects questions, NASA investigation overviews, source evidence and saved Lab workspaces. It is not an official NASA product or a validated combustion simulator.
+Fire-XII is a standalone React frontend with a fully local demonstration mode. It connects questions, NASA investigation overviews, source evidence and saved Lab workspaces. It is not an official NASA product or a validated combustion simulator.
 
 
 ## Phase 4 — Scientific workstation

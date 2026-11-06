@@ -1,4 +1,4 @@
-# FireSight product and design specification
+# Fire-XII product and design specification
 
 Original design specification · October 31, 2026. The user later changed the plan and authorized implementation as an independent prototype. The implemented identity follows Evidence notebook; see docs/IMPLEMENTATION_REPORT.md for verified behavior and deviations.
 

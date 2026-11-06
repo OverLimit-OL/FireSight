@@ -27,7 +27,7 @@ export const illustrativeModel: SimulationModel = {
   provenance: [
     {
       id: 'firesight-fixture-v1',
-      title: 'FireSight authored example · not NASA data',
+      title: 'Fire-XII authored example · not NASA data',
       url: null,
       origin: 'illustrative',
       revision: '1',

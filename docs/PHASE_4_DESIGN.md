@@ -4,7 +4,7 @@ The Lab is a bounded instrument surface for a researcher exploring an illustrati
 
 ## Composition and identity
 
-Retain the FireSight palette, IBM Plex Sans controls, IBM Plex Mono technical labels and restrained Source Serif headings. Use the existing instrument navy and steel materials. The experiment is the visual focus; panel separators encode working regions rather than decorative cards.
+Retain the Fire-XII palette, IBM Plex Sans controls, IBM Plex Mono technical labels and restrained Source Serif headings. Use the existing instrument navy and steel materials. The experiment is the visual focus; panel separators encode working regions rather than decorative cards.
 
 ```text
 App navigation | contextual title, configuration, research, run commands

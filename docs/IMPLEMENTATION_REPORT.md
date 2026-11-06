@@ -1,4 +1,4 @@
-# FireSight implementation and QA report
+# Fire-XII implementation and QA report
 
 October 31, 2026 · independent frontend prototype, implemented after the user changed the original pre-event plan. The original planning documents remain available. AGENTS.md was preserved; its earlier planning-only description is historical, and the user's later authorization controls this implementation.
 

@@ -13,7 +13,7 @@ import './features/simulation/hybrid-workspace.css'
 const root = createRoot(document.getElementById('root')!)
 root.render(
   <main className="page" role="status">
-    Opening FireSight…
+    Opening Fire-XII…
   </main>,
 )
 import('./App')
@@ -27,7 +27,7 @@ import('./App')
   .catch((error: unknown) =>
     root.render(
       <main className="page">
-        <h1>FireSight configuration needs attention</h1>
+        <h1>Fire-XII configuration needs attention</h1>
         <p role="alert">
           {error instanceof Error ? error.message : 'The application could not start.'}
         </p>
