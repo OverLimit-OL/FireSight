@@ -1,0 +1,373 @@
+/* Phase 5: one instrument, three levels of disclosure. */
+.dark .is-workstation {
+  --background: #101419;
+  --sidebar-bg: #14191f;
+  --card: #191f26;
+  --secondary: #232b34;
+  --muted: #232b34;
+  --border: #303943;
+  --primary: #e4aa73;
+  --input: #657380;
+}
+.is-workstation:not(.sidebar-collapsed) {
+  --sidebar-width: 174px;
+}
+.is-workstation .sidebar-content {
+  padding-inline: 12px;
+}
+.is-workstation .sidebar-brand > a {
+  font-size: 20px;
+}
+.is-workstation .nav-item {
+  font-size: 12px;
+}
+.workstation.studio-page {
+  grid-template-rows: 56px 38px minmax(0, 1fr) 24px;
+}
+.workstation .workstation-meta {
+  gap: 16px;
+}
+.workspace-presets {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  flex: none;
+  height: 100%;
+  margin-left: -7px;
+}
+.workspace-presets button {
+  padding: 5px 11px;
+  font: 12px var(--font-sans);
+  border-radius: 4px;
+  color: var(--muted-foreground);
+}
+.workspace-presets button[aria-pressed='true'] {
+  color: var(--primary);
+  background: var(--secondary);
+  box-shadow: inset 0 -2px var(--primary);
+}
+.workspace-presets button:hover {
+  background: var(--secondary);
+}
+.workstation-meta .configuration-state {
+  margin-left: auto;
+}
+.workstation .run-command > button {
+  font-weight: 500;
+}
+.workstation .workstation-tools > button {
+  background: transparent;
+}
+.workstation-grid {
+  gap: 0;
+}
+.workstation-grid.configuration-visible.inspector-visible {
+  grid-template-columns: minmax(200px, min(var(--config-size), 21%)) 6px minmax(0, 1fr) 6px minmax(
+      260px,
+      min(var(--inspector-size), 26%)
+    );
+}
+.dock-splitter {
+  background: var(--background);
+}
+.dock-panel-title {
+  height: 38px;
+  font: 500 12px var(--font-sans);
+  letter-spacing: 0;
+  border-bottom: 1px solid var(--border);
+}
+.workstation .studio-configuration summary {
+  font-weight: 500;
+}
+.workstation .studio-configuration input,
+.workstation .studio-configuration select {
+  background: var(--background);
+  border-color: var(--border);
+}
+.workstation .configuration-actions button {
+  min-height: 32px;
+}
+.workstation-scene,
+.scene-workstation,
+.scene-embedded {
+  background: #0d1219;
+}
+.workstation .scientific-viewport {
+  position: relative;
+}
+.workstation .analysis-view-switch {
+  position: absolute;
+  top: 7px;
+  left: 150px;
+  z-index: 5;
+  border: 0;
+  background: transparent;
+  padding: 0;
+}
+.workstation .analysis-view-switch button {
+  color: #b4c0cd;
+}
+.coordinated-views {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+  min-width: 0;
+}
+.coordinated-views > .experiment-viewport {
+  flex: 1;
+  min-width: 0;
+}
+.scene-workstation .experiment-toolbar {
+  background: #171e26;
+  border-color: #303943;
+  min-height: 38px;
+}
+.scene-workstation .experiment-toolbar > div:first-child {
+  font: 500 11px var(--font-sans);
+  letter-spacing: 0;
+}
+.scene-workstation .experiment-toolbar .view-switch[hidden] {
+  display: none;
+}
+.scene-workstation .scene-caption {
+  top: 22px;
+  left: 24px;
+}
+.scene-workstation .scene-caption h2,
+.scene-embedded .scene-caption h2 {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  letter-spacing: -0.035em;
+  color: #eef0f3;
+}
+.scene-workstation .scene-caption h2 {
+  font-size: clamp(20px, 1.8vw, 30px);
+}
+.scene-workstation .scene-caption p {
+  color: #a5b2c0;
+  font-size: 11px;
+}
+.scene-workstation .scene-caption .eyebrow {
+  color: #b6c1cc;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+}
+.scene-workstation .scene-options {
+  top: 48px;
+}
+.scene-workstation .scene-options > button {
+  background: #161e28;
+  color: #c5cdd5;
+}
+.scene-workstation .scene-selection-bar,
+.scene-embedded .scene-selection-bar {
+  background: #171e26;
+  border-color: #303943;
+}
+.scene-selection-bar select {
+  background: #171e26;
+  color: #e4aa73;
+}
+.scene-workstation .camera-rail {
+  background: #171e26e8;
+  border-color: #39434e;
+  border-radius: 6px;
+  bottom: 38px;
+}
+.scene-workstation .camera-rail button {
+  width: 30px;
+  height: 30px;
+  color: #c5d0dd;
+}
+.scene-workstation .scene-footnote {
+  background: #10161d;
+  border-color: #303943;
+  color: #aebbc8;
+}
+.scene-workstation .scene-annotation {
+  bottom: 85px;
+  color: #e8bc8e;
+}
+.scene-workstation .scene-selection-bar button {
+  color: #c6d0da;
+}
+.inspector-tab-content h3 {
+  font: 400 22px var(--font-sans) !important;
+  letter-spacing: -0.03em;
+}
+.inspector-tab-content {
+  padding: 20px 16px;
+}
+.inspector-context-strip {
+  padding: 10px 14px;
+}
+.selection-actions {
+  grid-template-columns: 1fr;
+}
+.selection-actions button {
+  height: 34px;
+}
+.selection-actions button:last-child {
+  background: var(--secondary);
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+.inspector-register {
+  font-variant-numeric: tabular-nums;
+}
+.copilot-thread-empty p {
+  font-family: var(--font-sans);
+}
+.copilot-turn {
+  border-radius: 6px;
+}
+.analysis-dock-heading {
+  border-bottom-color: var(--border);
+}
+.analysis-tabs button {
+  padding-inline: 13px;
+}
+.analysis-tabs button[aria-pressed='true'] {
+  color: var(--primary);
+}
+.linked-section {
+  flex: 0 0 31%;
+  min-width: 190px;
+  display: flex;
+  flex-direction: column;
+  background: #111820;
+  color: #c7d2de;
+  border-left: 1px solid #35404b;
+}
+.linked-section header {
+  display: grid;
+  gap: 4px;
+  padding: 12px 14px;
+  border-bottom: 1px solid #303943;
+  font-size: 12px;
+}
+.linked-section header span,
+.linked-section footer {
+  font: 10px var(--font-mono);
+  color: #a9b6c5;
+  line-height: 1.7;
+}
+.linked-section .apparatus-section {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  flex: 1;
+  padding: 0 5px;
+}
+.linked-section footer {
+  padding: 14px;
+}
+.mode-explore .scene-caption h2 {
+  font-size: clamp(24px, 2.6vw, 40px);
+}
+.mode-explore .scene-caption {
+  top: 30px;
+  left: 32px;
+}
+.mode-explore .scene-caption p {
+  font-size: 13px;
+}
+@media (min-width: 1100px) {
+  .mode-analyze .workstation-grid.inspector-visible {
+    grid-template-columns: minmax(0, 1fr) 6px minmax(260px, min(var(--inspector-size), 25%));
+  }
+}
+@media (max-width: 1099px) {
+  .workstation-grid.configuration-visible.inspector-visible {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .workstation-meta > span {
+    display: none;
+  }
+  .workstation .workstation-meta {
+    justify-content: space-between;
+    gap: 8px;
+  }
+}
+@media (max-width: 600px) {
+  .workstation.studio-page {
+    grid-template-rows: 82px 38px minmax(0, 1fr) 22px;
+  }
+  .workspace-presets button {
+    padding: 6px 7px;
+    font-size: 11px;
+  }
+  .validity-indicator {
+    font-size: 9px;
+    white-space: normal;
+    line-height: 1.3;
+  }
+  .workstation .analysis-view-switch {
+    left: 114px;
+    top: 5px;
+  }
+  .workstation .analysis-view-switch button {
+    font-size: 9px;
+    padding: 0 4px;
+  }
+  .scene-workstation .experiment-toolbar > div:first-child {
+    font-size: 9px;
+  }
+  .scene-workstation .scene-caption {
+    left: 14px;
+    top: 20px;
+  }
+  .scene-workstation .scene-caption h2 {
+    font-size: 21px;
+  }
+  .scene-workstation .scene-caption p {
+    font-size: 10px;
+    max-width: 220px;
+  }
+  .scene-workstation .scene-options {
+    top: 40px;
+    right: 5px;
+  }
+  .scene-workstation .camera-rail button {
+    width: 27px;
+    height: 27px;
+  }
+  .has-linked-section .coordinated-views {
+    flex-direction: column;
+  }
+  .linked-section {
+    flex: 0 0 32%;
+    min-height: 110px;
+    min-width: 0;
+    border-top: 1px solid #35404b;
+    border-left: 0;
+    position: relative;
+  }
+  .linked-section header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 10px;
+    padding: 6px;
+    border: 0;
+  }
+  .linked-section header span {
+    font-size: 8px;
+  }
+  .linked-section footer {
+    display: none;
+  }
+  .linked-section .apparatus-section {
+    padding: 0 40px;
+  }
+  .mode-analyze .scene-caption p {
+    display: none;
+  }
+}
+@media(max-width:450px) {
+  .scene-workstation .experiment-toolbar > div:first-child { display:none; }
+  .scene-workstation .experiment-toolbar .view-switch { margin-left:auto; }
+  .workstation .analysis-view-switch { left:10px; }
+  .workstation .analysis-view-switch button { font-size:11px; }
+  .scene-workstation .experiment-toolbar button { font-size:11px; }
+}

@@ -1,0 +1,23 @@
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Dependencies, builds, and caches
+node_modules/
+dist/
+dist-ssr/
+coverage/
+*.tsbuildinfo
+*.log
+.DS_Store
+
+# Generated artifacts, backups, and local browser state
+output/
+.playwright/
+.playwright-cli/
+playwright-report/
+test-results/
+*.tar.gz

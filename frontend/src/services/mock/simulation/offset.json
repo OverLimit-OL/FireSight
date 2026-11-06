@@ -1,0 +1,1302 @@
+{
+  "fixtureId": "illustrative-field-offset@1",
+  "origin": "illustrative",
+  "frames": [
+    {
+      "id": "offset-step-1",
+      "coordinate": {
+        "value": 0,
+        "unit": "step (dimensionless)"
+      },
+      "measurements": [
+        {
+          "entityId": "p-000",
+          "coordinates": [-1, -1, -1],
+          "value": 0.225
+        },
+        {
+          "entityId": "p-100",
+          "coordinates": [0, -1, -1],
+          "value": 0.305
+        },
+        {
+          "entityId": "p-200",
+          "coordinates": [1, -1, -1],
+          "value": 0.385
+        },
+        {
+          "entityId": "p-010",
+          "coordinates": [-1, 0, -1],
+          "value": 0.185
+        },
+        {
+          "entityId": "p-110",
+          "coordinates": [0, 0, -1],
+          "value": 0.265
+        },
+        {
+          "entityId": "p-210",
+          "coordinates": [1, 0, -1],
+          "value": 0.345
+        },
+        {
+          "entityId": "p-020",
+          "coordinates": [-1, 1, -1],
+          "value": 0.145
+        },
+        {
+          "entityId": "p-120",
+          "coordinates": [0, 1, -1],
+          "value": 0.225
+        },
+        {
+          "entityId": "p-220",
+          "coordinates": [1, 1, -1],
+          "value": 0.305
+        },
+        {
+          "entityId": "p-001",
+          "coordinates": [-1, -1, 0],
+          "value": 0.26
+        },
+        {
+          "entityId": "p-101",
+          "coordinates": [0, -1, 0],
+          "value": 0.34
+        },
+        {
+          "entityId": "p-201",
+          "coordinates": [1, -1, 0],
+          "value": 0.42
+        },
+        {
+          "entityId": "p-011",
+          "coordinates": [-1, 0, 0],
+          "value": 0.22
+        },
+        {
+          "entityId": "p-111",
+          "coordinates": [0, 0, 0],
+          "value": 0.3
+        },
+        {
+          "entityId": "p-211",
+          "coordinates": [1, 0, 0],
+          "value": 0.38
+        },
+        {
+          "entityId": "p-021",
+          "coordinates": [-1, 1, 0],
+          "value": 0.18
+        },
+        {
+          "entityId": "p-121",
+          "coordinates": [0, 1, 0],
+          "value": 0.26
+        },
+        {
+          "entityId": "p-221",
+          "coordinates": [1, 1, 0],
+          "value": 0.34
+        },
+        {
+          "entityId": "p-002",
+          "coordinates": [-1, -1, 1],
+          "value": 0.295
+        },
+        {
+          "entityId": "p-102",
+          "coordinates": [0, -1, 1],
+          "value": 0.375
+        },
+        {
+          "entityId": "p-202",
+          "coordinates": [1, -1, 1],
+          "value": 0.455
+        },
+        {
+          "entityId": "p-012",
+          "coordinates": [-1, 0, 1],
+          "value": 0.255
+        },
+        {
+          "entityId": "p-112",
+          "coordinates": [0, 0, 1],
+          "value": 0.335
+        },
+        {
+          "entityId": "p-212",
+          "coordinates": [1, 0, 1],
+          "value": 0.415
+        },
+        {
+          "entityId": "p-022",
+          "coordinates": [-1, 1, 1],
+          "value": 0.215
+        },
+        {
+          "entityId": "p-122",
+          "coordinates": [0, 1, 1],
+          "value": 0.295
+        },
+        {
+          "entityId": "p-222",
+          "coordinates": [1, 1, 1],
+          "value": 0.375
+        }
+      ]
+    },
+    {
+      "id": "offset-step-3",
+      "coordinate": {
+        "value": 1,
+        "unit": "step (dimensionless)"
+      },
+      "measurements": [
+        {
+          "entityId": "p-000",
+          "coordinates": [-1, -1, -1],
+          "value": 0.29
+        },
+        {
+          "entityId": "p-100",
+          "coordinates": [0, -1, -1],
+          "value": 0.37
+        },
+        {
+          "entityId": "p-200",
+          "coordinates": [1, -1, -1],
+          "value": 0.45
+        },
+        {
+          "entityId": "p-010",
+          "coordinates": [-1, 0, -1],
+          "value": 0.25
+        },
+        {
+          "entityId": "p-110",
+          "coordinates": [0, 0, -1],
+          "value": 0.33
+        },
+        {
+          "entityId": "p-210",
+          "coordinates": [1, 0, -1],
+          "value": 0.41
+        },
+        {
+          "entityId": "p-020",
+          "coordinates": [-1, 1, -1],
+          "value": 0.21
+        },
+        {
+          "entityId": "p-120",
+          "coordinates": [0, 1, -1],
+          "value": 0.29
+        },
+        {
+          "entityId": "p-220",
+          "coordinates": [1, 1, -1],
+          "value": 0.37
+        },
+        {
+          "entityId": "p-001",
+          "coordinates": [-1, -1, 0],
+          "value": 0.325
+        },
+        {
+          "entityId": "p-101",
+          "coordinates": [0, -1, 0],
+          "value": 0.405
+        },
+        {
+          "entityId": "p-201",
+          "coordinates": [1, -1, 0],
+          "value": 0.485
+        },
+        {
+          "entityId": "p-011",
+          "coordinates": [-1, 0, 0],
+          "value": 0.285
+        },
+        {
+          "entityId": "p-111",
+          "coordinates": [0, 0, 0],
+          "value": 0.365
+        },
+        {
+          "entityId": "p-211",
+          "coordinates": [1, 0, 0],
+          "value": 0.445
+        },
+        {
+          "entityId": "p-021",
+          "coordinates": [-1, 1, 0],
+          "value": 0.245
+        },
+        {
+          "entityId": "p-121",
+          "coordinates": [0, 1, 0],
+          "value": 0.325
+        },
+        {
+          "entityId": "p-221",
+          "coordinates": [1, 1, 0],
+          "value": 0.405
+        },
+        {
+          "entityId": "p-002",
+          "coordinates": [-1, -1, 1],
+          "value": 0.36
+        },
+        {
+          "entityId": "p-102",
+          "coordinates": [0, -1, 1],
+          "value": 0.44
+        },
+        {
+          "entityId": "p-202",
+          "coordinates": [1, -1, 1],
+          "value": 0.52
+        },
+        {
+          "entityId": "p-012",
+          "coordinates": [-1, 0, 1],
+          "value": 0.32
+        },
+        {
+          "entityId": "p-112",
+          "coordinates": [0, 0, 1],
+          "value": 0.4
+        },
+        {
+          "entityId": "p-212",
+          "coordinates": [1, 0, 1],
+          "value": 0.48
+        },
+        {
+          "entityId": "p-022",
+          "coordinates": [-1, 1, 1],
+          "value": 0.28
+        },
+        {
+          "entityId": "p-122",
+          "coordinates": [0, 1, 1],
+          "value": 0.36
+        },
+        {
+          "entityId": "p-222",
+          "coordinates": [1, 1, 1],
+          "value": 0.44
+        }
+      ]
+    },
+    {
+      "id": "offset-step-5",
+      "coordinate": {
+        "value": 2,
+        "unit": "step (dimensionless)"
+      },
+      "measurements": [
+        {
+          "entityId": "p-000",
+          "coordinates": [-1, -1, -1],
+          "value": 0.355
+        },
+        {
+          "entityId": "p-100",
+          "coordinates": [0, -1, -1],
+          "value": 0.435
+        },
+        {
+          "entityId": "p-200",
+          "coordinates": [1, -1, -1],
+          "value": 0.515
+        },
+        {
+          "entityId": "p-010",
+          "coordinates": [-1, 0, -1],
+          "value": 0.315
+        },
+        {
+          "entityId": "p-110",
+          "coordinates": [0, 0, -1],
+          "value": 0.395
+        },
+        {
+          "entityId": "p-210",
+          "coordinates": [1, 0, -1],
+          "value": 0.475
+        },
+        {
+          "entityId": "p-020",
+          "coordinates": [-1, 1, -1],
+          "value": 0.275
+        },
+        {
+          "entityId": "p-120",
+          "coordinates": [0, 1, -1],
+          "value": 0.355
+        },
+        {
+          "entityId": "p-220",
+          "coordinates": [1, 1, -1],
+          "value": 0.435
+        },
+        {
+          "entityId": "p-001",
+          "coordinates": [-1, -1, 0],
+          "value": 0.39
+        },
+        {
+          "entityId": "p-101",
+          "coordinates": [0, -1, 0],
+          "value": 0.47
+        },
+        {
+          "entityId": "p-201",
+          "coordinates": [1, -1, 0],
+          "value": 0.55
+        },
+        {
+          "entityId": "p-011",
+          "coordinates": [-1, 0, 0],
+          "value": 0.35
+        },
+        {
+          "entityId": "p-111",
+          "coordinates": [0, 0, 0],
+          "value": 0.43
+        },
+        {
+          "entityId": "p-211",
+          "coordinates": [1, 0, 0],
+          "value": 0.51
+        },
+        {
+          "entityId": "p-021",
+          "coordinates": [-1, 1, 0],
+          "value": 0.31
+        },
+        {
+          "entityId": "p-121",
+          "coordinates": [0, 1, 0],
+          "value": 0.39
+        },
+        {
+          "entityId": "p-221",
+          "coordinates": [1, 1, 0],
+          "value": 0.47
+        },
+        {
+          "entityId": "p-002",
+          "coordinates": [-1, -1, 1],
+          "value": 0.425
+        },
+        {
+          "entityId": "p-102",
+          "coordinates": [0, -1, 1],
+          "value": 0.505
+        },
+        {
+          "entityId": "p-202",
+          "coordinates": [1, -1, 1],
+          "value": 0.585
+        },
+        {
+          "entityId": "p-012",
+          "coordinates": [-1, 0, 1],
+          "value": 0.385
+        },
+        {
+          "entityId": "p-112",
+          "coordinates": [0, 0, 1],
+          "value": 0.465
+        },
+        {
+          "entityId": "p-212",
+          "coordinates": [1, 0, 1],
+          "value": 0.545
+        },
+        {
+          "entityId": "p-022",
+          "coordinates": [-1, 1, 1],
+          "value": 0.345
+        },
+        {
+          "entityId": "p-122",
+          "coordinates": [0, 1, 1],
+          "value": 0.425
+        },
+        {
+          "entityId": "p-222",
+          "coordinates": [1, 1, 1],
+          "value": 0.505
+        }
+      ]
+    },
+    {
+      "id": "offset-step-7",
+      "coordinate": {
+        "value": 3,
+        "unit": "step (dimensionless)"
+      },
+      "measurements": [
+        {
+          "entityId": "p-000",
+          "coordinates": [-1, -1, -1],
+          "value": 0.42
+        },
+        {
+          "entityId": "p-100",
+          "coordinates": [0, -1, -1],
+          "value": 0.5
+        },
+        {
+          "entityId": "p-200",
+          "coordinates": [1, -1, -1],
+          "value": 0.58
+        },
+        {
+          "entityId": "p-010",
+          "coordinates": [-1, 0, -1],
+          "value": 0.38
+        },
+        {
+          "entityId": "p-110",
+          "coordinates": [0, 0, -1],
+          "value": 0.46
+        },
+        {
+          "entityId": "p-210",
+          "coordinates": [1, 0, -1],
+          "value": 0.54
+        },
+        {
+          "entityId": "p-020",
+          "coordinates": [-1, 1, -1],
+          "value": 0.34
+        },
+        {
+          "entityId": "p-120",
+          "coordinates": [0, 1, -1],
+          "value": 0.42
+        },
+        {
+          "entityId": "p-220",
+          "coordinates": [1, 1, -1],
+          "value": 0.5
+        },
+        {
+          "entityId": "p-001",
+          "coordinates": [-1, -1, 0],
+          "value": 0.455
+        },
+        {
+          "entityId": "p-101",
+          "coordinates": [0, -1, 0],
+          "value": 0.535
+        },
+        {
+          "entityId": "p-201",
+          "coordinates": [1, -1, 0],
+          "value": 0.615
+        },
+        {
+          "entityId": "p-011",
+          "coordinates": [-1, 0, 0],
+          "value": 0.415
+        },
+        {
+          "entityId": "p-111",
+          "coordinates": [0, 0, 0],
+          "value": 0.495
+        },
+        {
+          "entityId": "p-211",
+          "coordinates": [1, 0, 0],
+          "value": 0.575
+        },
+        {
+          "entityId": "p-021",
+          "coordinates": [-1, 1, 0],
+          "value": 0.375
+        },
+        {
+          "entityId": "p-121",
+          "coordinates": [0, 1, 0],
+          "value": 0.455
+        },
+        {
+          "entityId": "p-221",
+          "coordinates": [1, 1, 0],
+          "value": 0.535
+        },
+        {
+          "entityId": "p-002",
+          "coordinates": [-1, -1, 1],
+          "value": 0.49
+        },
+        {
+          "entityId": "p-102",
+          "coordinates": [0, -1, 1],
+          "value": 0.57
+        },
+        {
+          "entityId": "p-202",
+          "coordinates": [1, -1, 1],
+          "value": 0.65
+        },
+        {
+          "entityId": "p-012",
+          "coordinates": [-1, 0, 1],
+          "value": 0.45
+        },
+        {
+          "entityId": "p-112",
+          "coordinates": [0, 0, 1],
+          "value": 0.53
+        },
+        {
+          "entityId": "p-212",
+          "coordinates": [1, 0, 1],
+          "value": 0.61
+        },
+        {
+          "entityId": "p-022",
+          "coordinates": [-1, 1, 1],
+          "value": 0.41
+        },
+        {
+          "entityId": "p-122",
+          "coordinates": [0, 1, 1],
+          "value": 0.49
+        },
+        {
+          "entityId": "p-222",
+          "coordinates": [1, 1, 1],
+          "value": 0.57
+        }
+      ]
+    },
+    {
+      "id": "offset-step-9",
+      "coordinate": {
+        "value": 4,
+        "unit": "step (dimensionless)"
+      },
+      "measurements": [
+        {
+          "entityId": "p-000",
+          "coordinates": [-1, -1, -1],
+          "value": 0.485
+        },
+        {
+          "entityId": "p-100",
+          "coordinates": [0, -1, -1],
+          "value": 0.565
+        },
+        {
+          "entityId": "p-200",
+          "coordinates": [1, -1, -1],
+          "value": 0.645
+        },
+        {
+          "entityId": "p-010",
+          "coordinates": [-1, 0, -1],
+          "value": 0.445
+        },
+        {
+          "entityId": "p-110",
+          "coordinates": [0, 0, -1],
+          "value": 0.525
+        },
+        {
+          "entityId": "p-210",
+          "coordinates": [1, 0, -1],
+          "value": 0.605
+        },
+        {
+          "entityId": "p-020",
+          "coordinates": [-1, 1, -1],
+          "value": 0.405
+        },
+        {
+          "entityId": "p-120",
+          "coordinates": [0, 1, -1],
+          "value": 0.485
+        },
+        {
+          "entityId": "p-220",
+          "coordinates": [1, 1, -1],
+          "value": 0.565
+        },
+        {
+          "entityId": "p-001",
+          "coordinates": [-1, -1, 0],
+          "value": 0.52
+        },
+        {
+          "entityId": "p-101",
+          "coordinates": [0, -1, 0],
+          "value": 0.6
+        },
+        {
+          "entityId": "p-201",
+          "coordinates": [1, -1, 0],
+          "value": 0.68
+        },
+        {
+          "entityId": "p-011",
+          "coordinates": [-1, 0, 0],
+          "value": 0.48
+        },
+        {
+          "entityId": "p-111",
+          "coordinates": [0, 0, 0],
+          "value": null
+        },
+        {
+          "entityId": "p-211",
+          "coordinates": [1, 0, 0],
+          "value": 0.64
+        },
+        {
+          "entityId": "p-021",
+          "coordinates": [-1, 1, 0],
+          "value": 0.44
+        },
+        {
+          "entityId": "p-121",
+          "coordinates": [0, 1, 0],
+          "value": 0.52
+        },
+        {
+          "entityId": "p-221",
+          "coordinates": [1, 1, 0],
+          "value": 0.6
+        },
+        {
+          "entityId": "p-002",
+          "coordinates": [-1, -1, 1],
+          "value": 0.555
+        },
+        {
+          "entityId": "p-102",
+          "coordinates": [0, -1, 1],
+          "value": 0.635
+        },
+        {
+          "entityId": "p-202",
+          "coordinates": [1, -1, 1],
+          "value": 0.715
+        },
+        {
+          "entityId": "p-012",
+          "coordinates": [-1, 0, 1],
+          "value": 0.515
+        },
+        {
+          "entityId": "p-112",
+          "coordinates": [0, 0, 1],
+          "value": 0.595
+        },
+        {
+          "entityId": "p-212",
+          "coordinates": [1, 0, 1],
+          "value": 0.675
+        },
+        {
+          "entityId": "p-022",
+          "coordinates": [-1, 1, 1],
+          "value": 0.475
+        },
+        {
+          "entityId": "p-122",
+          "coordinates": [0, 1, 1],
+          "value": 0.555
+        },
+        {
+          "entityId": "p-222",
+          "coordinates": [1, 1, 1],
+          "value": 0.635
+        }
+      ]
+    },
+    {
+      "id": "offset-step-11",
+      "coordinate": {
+        "value": 5,
+        "unit": "step (dimensionless)"
+      },
+      "measurements": [
+        {
+          "entityId": "p-000",
+          "coordinates": [-1, -1, -1],
+          "value": 0.55
+        },
+        {
+          "entityId": "p-100",
+          "coordinates": [0, -1, -1],
+          "value": 0.63
+        },
+        {
+          "entityId": "p-200",
+          "coordinates": [1, -1, -1],
+          "value": 0.71
+        },
+        {
+          "entityId": "p-010",
+          "coordinates": [-1, 0, -1],
+          "value": 0.51
+        },
+        {
+          "entityId": "p-110",
+          "coordinates": [0, 0, -1],
+          "value": 0.59
+        },
+        {
+          "entityId": "p-210",
+          "coordinates": [1, 0, -1],
+          "value": 0.67
+        },
+        {
+          "entityId": "p-020",
+          "coordinates": [-1, 1, -1],
+          "value": 0.47
+        },
+        {
+          "entityId": "p-120",
+          "coordinates": [0, 1, -1],
+          "value": 0.55
+        },
+        {
+          "entityId": "p-220",
+          "coordinates": [1, 1, -1],
+          "value": 0.63
+        },
+        {
+          "entityId": "p-001",
+          "coordinates": [-1, -1, 0],
+          "value": 0.585
+        },
+        {
+          "entityId": "p-101",
+          "coordinates": [0, -1, 0],
+          "value": 0.665
+        },
+        {
+          "entityId": "p-201",
+          "coordinates": [1, -1, 0],
+          "value": 0.745
+        },
+        {
+          "entityId": "p-011",
+          "coordinates": [-1, 0, 0],
+          "value": 0.545
+        },
+        {
+          "entityId": "p-111",
+          "coordinates": [0, 0, 0],
+          "value": 0.625
+        },
+        {
+          "entityId": "p-211",
+          "coordinates": [1, 0, 0],
+          "value": 0.705
+        },
+        {
+          "entityId": "p-021",
+          "coordinates": [-1, 1, 0],
+          "value": 0.505
+        },
+        {
+          "entityId": "p-121",
+          "coordinates": [0, 1, 0],
+          "value": 0.585
+        },
+        {
+          "entityId": "p-221",
+          "coordinates": [1, 1, 0],
+          "value": 0.665
+        },
+        {
+          "entityId": "p-002",
+          "coordinates": [-1, -1, 1],
+          "value": 0.62
+        },
+        {
+          "entityId": "p-102",
+          "coordinates": [0, -1, 1],
+          "value": 0.7
+        },
+        {
+          "entityId": "p-202",
+          "coordinates": [1, -1, 1],
+          "value": 0.78
+        },
+        {
+          "entityId": "p-012",
+          "coordinates": [-1, 0, 1],
+          "value": 0.58
+        },
+        {
+          "entityId": "p-112",
+          "coordinates": [0, 0, 1],
+          "value": 0.66
+        },
+        {
+          "entityId": "p-212",
+          "coordinates": [1, 0, 1],
+          "value": 0.74
+        },
+        {
+          "entityId": "p-022",
+          "coordinates": [-1, 1, 1],
+          "value": 0.54
+        },
+        {
+          "entityId": "p-122",
+          "coordinates": [0, 1, 1],
+          "value": 0.62
+        },
+        {
+          "entityId": "p-222",
+          "coordinates": [1, 1, 1],
+          "value": 0.7
+        }
+      ]
+    },
+    {
+      "id": "offset-step-13",
+      "coordinate": {
+        "value": 6,
+        "unit": "step (dimensionless)"
+      },
+      "measurements": [
+        {
+          "entityId": "p-000",
+          "coordinates": [-1, -1, -1],
+          "value": 0.615
+        },
+        {
+          "entityId": "p-100",
+          "coordinates": [0, -1, -1],
+          "value": 0.695
+        },
+        {
+          "entityId": "p-200",
+          "coordinates": [1, -1, -1],
+          "value": 0.775
+        },
+        {
+          "entityId": "p-010",
+          "coordinates": [-1, 0, -1],
+          "value": 0.575
+        },
+        {
+          "entityId": "p-110",
+          "coordinates": [0, 0, -1],
+          "value": 0.655
+        },
+        {
+          "entityId": "p-210",
+          "coordinates": [1, 0, -1],
+          "value": 0.735
+        },
+        {
+          "entityId": "p-020",
+          "coordinates": [-1, 1, -1],
+          "value": 0.535
+        },
+        {
+          "entityId": "p-120",
+          "coordinates": [0, 1, -1],
+          "value": 0.615
+        },
+        {
+          "entityId": "p-220",
+          "coordinates": [1, 1, -1],
+          "value": 0.695
+        },
+        {
+          "entityId": "p-001",
+          "coordinates": [-1, -1, 0],
+          "value": 0.65
+        },
+        {
+          "entityId": "p-101",
+          "coordinates": [0, -1, 0],
+          "value": 0.73
+        },
+        {
+          "entityId": "p-201",
+          "coordinates": [1, -1, 0],
+          "value": 0.81
+        },
+        {
+          "entityId": "p-011",
+          "coordinates": [-1, 0, 0],
+          "value": 0.61
+        },
+        {
+          "entityId": "p-111",
+          "coordinates": [0, 0, 0],
+          "value": 0.69
+        },
+        {
+          "entityId": "p-211",
+          "coordinates": [1, 0, 0],
+          "value": 0.77
+        },
+        {
+          "entityId": "p-021",
+          "coordinates": [-1, 1, 0],
+          "value": 0.57
+        },
+        {
+          "entityId": "p-121",
+          "coordinates": [0, 1, 0],
+          "value": 0.65
+        },
+        {
+          "entityId": "p-221",
+          "coordinates": [1, 1, 0],
+          "value": 0.73
+        },
+        {
+          "entityId": "p-002",
+          "coordinates": [-1, -1, 1],
+          "value": 0.685
+        },
+        {
+          "entityId": "p-102",
+          "coordinates": [0, -1, 1],
+          "value": 0.765
+        },
+        {
+          "entityId": "p-202",
+          "coordinates": [1, -1, 1],
+          "value": 0.845
+        },
+        {
+          "entityId": "p-012",
+          "coordinates": [-1, 0, 1],
+          "value": 0.645
+        },
+        {
+          "entityId": "p-112",
+          "coordinates": [0, 0, 1],
+          "value": 0.725
+        },
+        {
+          "entityId": "p-212",
+          "coordinates": [1, 0, 1],
+          "value": 0.805
+        },
+        {
+          "entityId": "p-022",
+          "coordinates": [-1, 1, 1],
+          "value": 0.605
+        },
+        {
+          "entityId": "p-122",
+          "coordinates": [0, 1, 1],
+          "value": 0.685
+        },
+        {
+          "entityId": "p-222",
+          "coordinates": [1, 1, 1],
+          "value": 0.765
+        }
+      ]
+    },
+    {
+      "id": "offset-step-15",
+      "coordinate": {
+        "value": 7,
+        "unit": "step (dimensionless)"
+      },
+      "measurements": [
+        {
+          "entityId": "p-000",
+          "coordinates": [-1, -1, -1],
+          "value": 0.68
+        },
+        {
+          "entityId": "p-100",
+          "coordinates": [0, -1, -1],
+          "value": 0.76
+        },
+        {
+          "entityId": "p-200",
+          "coordinates": [1, -1, -1],
+          "value": 0.84
+        },
+        {
+          "entityId": "p-010",
+          "coordinates": [-1, 0, -1],
+          "value": 0.64
+        },
+        {
+          "entityId": "p-110",
+          "coordinates": [0, 0, -1],
+          "value": 0.72
+        },
+        {
+          "entityId": "p-210",
+          "coordinates": [1, 0, -1],
+          "value": 0.8
+        },
+        {
+          "entityId": "p-020",
+          "coordinates": [-1, 1, -1],
+          "value": 0.6
+        },
+        {
+          "entityId": "p-120",
+          "coordinates": [0, 1, -1],
+          "value": 0.68
+        },
+        {
+          "entityId": "p-220",
+          "coordinates": [1, 1, -1],
+          "value": 0.76
+        },
+        {
+          "entityId": "p-001",
+          "coordinates": [-1, -1, 0],
+          "value": 0.715
+        },
+        {
+          "entityId": "p-101",
+          "coordinates": [0, -1, 0],
+          "value": 0.795
+        },
+        {
+          "entityId": "p-201",
+          "coordinates": [1, -1, 0],
+          "value": 0.875
+        },
+        {
+          "entityId": "p-011",
+          "coordinates": [-1, 0, 0],
+          "value": 0.675
+        },
+        {
+          "entityId": "p-111",
+          "coordinates": [0, 0, 0],
+          "value": 0.755
+        },
+        {
+          "entityId": "p-211",
+          "coordinates": [1, 0, 0],
+          "value": 0.835
+        },
+        {
+          "entityId": "p-021",
+          "coordinates": [-1, 1, 0],
+          "value": 0.635
+        },
+        {
+          "entityId": "p-121",
+          "coordinates": [0, 1, 0],
+          "value": 0.715
+        },
+        {
+          "entityId": "p-221",
+          "coordinates": [1, 1, 0],
+          "value": 0.795
+        },
+        {
+          "entityId": "p-002",
+          "coordinates": [-1, -1, 1],
+          "value": 0.75
+        },
+        {
+          "entityId": "p-102",
+          "coordinates": [0, -1, 1],
+          "value": 0.83
+        },
+        {
+          "entityId": "p-202",
+          "coordinates": [1, -1, 1],
+          "value": 0.91
+        },
+        {
+          "entityId": "p-012",
+          "coordinates": [-1, 0, 1],
+          "value": 0.71
+        },
+        {
+          "entityId": "p-112",
+          "coordinates": [0, 0, 1],
+          "value": 0.79
+        },
+        {
+          "entityId": "p-212",
+          "coordinates": [1, 0, 1],
+          "value": 0.87
+        },
+        {
+          "entityId": "p-022",
+          "coordinates": [-1, 1, 1],
+          "value": 0.67
+        },
+        {
+          "entityId": "p-122",
+          "coordinates": [0, 1, 1],
+          "value": 0.75
+        },
+        {
+          "entityId": "p-222",
+          "coordinates": [1, 1, 1],
+          "value": 0.83
+        }
+      ]
+    },
+    {
+      "id": "offset-step-17",
+      "coordinate": {
+        "value": 8,
+        "unit": "step (dimensionless)"
+      },
+      "measurements": [
+        {
+          "entityId": "p-000",
+          "coordinates": [-1, -1, -1],
+          "value": 0.745
+        },
+        {
+          "entityId": "p-100",
+          "coordinates": [0, -1, -1],
+          "value": 0.825
+        },
+        {
+          "entityId": "p-200",
+          "coordinates": [1, -1, -1],
+          "value": 0.905
+        },
+        {
+          "entityId": "p-010",
+          "coordinates": [-1, 0, -1],
+          "value": 0.705
+        },
+        {
+          "entityId": "p-110",
+          "coordinates": [0, 0, -1],
+          "value": 0.785
+        },
+        {
+          "entityId": "p-210",
+          "coordinates": [1, 0, -1],
+          "value": 0.865
+        },
+        {
+          "entityId": "p-020",
+          "coordinates": [-1, 1, -1],
+          "value": 0.665
+        },
+        {
+          "entityId": "p-120",
+          "coordinates": [0, 1, -1],
+          "value": 0.745
+        },
+        {
+          "entityId": "p-220",
+          "coordinates": [1, 1, -1],
+          "value": 0.825
+        },
+        {
+          "entityId": "p-001",
+          "coordinates": [-1, -1, 0],
+          "value": 0.78
+        },
+        {
+          "entityId": "p-101",
+          "coordinates": [0, -1, 0],
+          "value": 0.86
+        },
+        {
+          "entityId": "p-201",
+          "coordinates": [1, -1, 0],
+          "value": 0.94
+        },
+        {
+          "entityId": "p-011",
+          "coordinates": [-1, 0, 0],
+          "value": 0.74
+        },
+        {
+          "entityId": "p-111",
+          "coordinates": [0, 0, 0],
+          "value": 0.82
+        },
+        {
+          "entityId": "p-211",
+          "coordinates": [1, 0, 0],
+          "value": 0.9
+        },
+        {
+          "entityId": "p-021",
+          "coordinates": [-1, 1, 0],
+          "value": 0.7
+        },
+        {
+          "entityId": "p-121",
+          "coordinates": [0, 1, 0],
+          "value": 0.78
+        },
+        {
+          "entityId": "p-221",
+          "coordinates": [1, 1, 0],
+          "value": 0.86
+        },
+        {
+          "entityId": "p-002",
+          "coordinates": [-1, -1, 1],
+          "value": 0.815
+        },
+        {
+          "entityId": "p-102",
+          "coordinates": [0, -1, 1],
+          "value": 0.895
+        },
+        {
+          "entityId": "p-202",
+          "coordinates": [1, -1, 1],
+          "value": 0.975
+        },
+        {
+          "entityId": "p-012",
+          "coordinates": [-1, 0, 1],
+          "value": 0.775
+        },
+        {
+          "entityId": "p-112",
+          "coordinates": [0, 0, 1],
+          "value": 0.855
+        },
+        {
+          "entityId": "p-212",
+          "coordinates": [1, 0, 1],
+          "value": 0.935
+        },
+        {
+          "entityId": "p-022",
+          "coordinates": [-1, 1, 1],
+          "value": 0.735
+        },
+        {
+          "entityId": "p-122",
+          "coordinates": [0, 1, 1],
+          "value": 0.815
+        },
+        {
+          "entityId": "p-222",
+          "coordinates": [1, 1, 1],
+          "value": 0.895
+        }
+      ]
+    }
+  ]
+}
