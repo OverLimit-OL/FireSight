@@ -12,9 +12,9 @@ Seven-slide Canva presentation, including the title. Public view-only link, veri
 
 ## Project
 
-https://firesight-production.up.railway.app/welcome
+https://firesight-production.up.railway.app/demo/
 
-This public project overview is accessible without an account. The presentation demonstrates the workflow. Personal workspace features require registration, and Gemini conversations require the user’s own API key.
+The public interactive demo is accessible without registration and uses labeled local demonstration data and scripted responses. The public overview is https://firesight-production.up.railway.app/welcome . Personal workspace features require registration, and Gemini conversations require the user’s own API key.
 
 ## Project Details
 
@@ -101,4 +101,4 @@ No additional space-agency datasets are connected. The project uses these softwa
 
 ## Submission check
 
-The public overview and public Canva presentation can be viewed without registration. The private source repository is not used as the public project link. Confirm the selected Space Apps challenge title and team attribution in the submission form before submitting. This file supplies the requested text and links and does not submit the form.
+The interactive public demo, public overview and public Canva presentation can be viewed without registration. The private source repository is not used as the public project link. Confirm the selected Space Apps challenge title and team attribution in the submission form before submitting. This file supplies the requested text and links and does not submit the form.

@@ -6,3 +6,4 @@ frontend/.env
 backend/storage
 .venv
 *.log
+frontend/dist-demo

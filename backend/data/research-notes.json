@@ -34,5 +34,29 @@
     "text": "NASA describes FLEX droplet experiments that revealed continuing low-temperature combustion after the visible flame appeared to extinguish. This cool-flame behavior shows why disappearance of visible luminosity alone does not establish that chemical reaction has ended.",
     "limitations": "Qualitative agency summary. It supplies no numerical extinction threshold for a selected run.",
     "preparation": "SI-assisted paraphrase prepared with OpenAI Codex; original source linked for review."
+  },
+  {
+    "id": "bass-suppression-context",
+    "studyId": "bass",
+    "sourceUrl": "https://www.nasa.gov/missions/station/iss-research/youre-hot-then-youre-cold/",
+    "title": "NASA — You’re Hot Then You’re Cold",
+    "retrievedAt": "2026-11-15",
+    "locator": "Putting out fires",
+    "kind": "agency research summary paraphrase",
+    "text": "BASS studies extinguishing solid fuels in microgravity. NASA highlights the importance of ventilation, flame geometry and extinguisher behavior. Increasing oxygen interaction can worsen burning, so terrestrial suppression assumptions need evaluation under spacecraft conditions.",
+    "limitations": "Qualitative source context. No operational suppressant setting or numerical comparison is established.",
+    "preparation": "SI-assisted paraphrase prepared with OpenAI Codex; original source linked for review."
+  },
+  {
+    "id": "saffire-scale-context",
+    "studyId": "saffire",
+    "sourceUrl": "https://www.nasa.gov/missions/station/iss-research/youre-hot-then-youre-cold/",
+    "title": "NASA — You’re Hot Then You’re Cold",
+    "retrievedAt": "2026-11-15",
+    "locator": "Going big",
+    "kind": "agency program summary paraphrase",
+    "text": "The Saffire program uses uncrewed Cygnus vehicles after departure from the station to investigate larger fires. NASA describes observing flame growth and oxygen consumption to improve understanding of fire growth in microgravity.",
+    "limitations": "Program-level summary. The listed quantities do not establish run-level data availability in this workspace.",
+    "preparation": "SI-assisted paraphrase prepared with OpenAI Codex; original source linked for review."
   }
 ]

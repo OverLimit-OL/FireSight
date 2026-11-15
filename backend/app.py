@@ -133,9 +133,10 @@ async def access(request: Request, call_next):
         public = request.url.path in (
             "/",
             "/welcome",
+            "/demo",
             "/login",
             "/register",
-        ) or request.url.path.startswith(("/auth/", "/public/"))
+        ) or request.url.path.startswith(("/auth/", "/public/", "/demo/"))
         if not user and not public:
             if request.url.path.startswith("/api/"):
                 return JSONResponse({"error": {"message": "Sign in to continue"}}, 401)
@@ -711,6 +712,22 @@ def welcome():
 DIST = Path(os.getenv("FRONTEND_DIST", str(ROOT.parent / "frontend/dist")))
 if (DIST / "assets").exists():
     app.mount("/assets", StaticFiles(directory=DIST / "assets"), name="assets")
+
+
+DEMO_DIST = ROOT.parent / "frontend/dist-demo"
+
+
+@app.get("/demo")
+def demo_redirect():
+    return RedirectResponse("/demo/", 307)
+
+
+@app.get("/demo/{path:path}")
+def public_demo(path: str):
+    target = (DEMO_DIST / path).resolve()
+    if target.is_relative_to(DEMO_DIST.resolve()) and target.is_file():
+        return FileResponse(target)
+    return FileResponse(DEMO_DIST / "index.html")
 
 
 @app.get("/{path:path}")

@@ -25,3 +25,4 @@ test-results/
 backend/storage/
 __pycache__/
 .railway/
+frontend/dist-demo/

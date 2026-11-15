@@ -26,5 +26,9 @@
         "react/only-export-components": "off"
       }
     }
+  ],
+  "ignorePatterns": [
+    "dist/**",
+    "dist-demo/**"
   ]
 }

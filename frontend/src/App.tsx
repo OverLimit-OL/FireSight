@@ -39,7 +39,7 @@ export default function App() {
     <AppErrorBoundary>
       <QueryClientProvider client={queryClient}>
         <PreferencesProvider>
-          <BrowserRouter>
+          <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
             <Suspense
               fallback={
                 <div className="page">

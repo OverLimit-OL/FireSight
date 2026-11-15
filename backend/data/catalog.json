@@ -25,6 +25,16 @@
           "publishedAt": null,
           "retrievedAt": null,
           "locator": "Investigation overview"
+        },
+        {
+          "id": "bass-suppression-context",
+          "title": "NASA \u2014 You\u2019re Hot Then You\u2019re Cold",
+          "url": "https://www.nasa.gov/missions/station/iss-research/youre-hot-then-youre-cold/",
+          "type": "agency-page",
+          "publisher": "NASA",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-15",
+          "locator": "Putting out fires"
         }
       ],
       "relatedStudyIds": [
@@ -191,6 +201,16 @@
           "publishedAt": null,
           "retrievedAt": null,
           "locator": "Investigation overview"
+        },
+        {
+          "id": "saffire-scale-context",
+          "title": "NASA \u2014 You\u2019re Hot Then You\u2019re Cold",
+          "url": "https://www.nasa.gov/missions/station/iss-research/youre-hot-then-youre-cold/",
+          "type": "agency-page",
+          "publisher": "NASA",
+          "publishedAt": null,
+          "retrievedAt": "2026-11-15",
+          "locator": "Going big"
         }
       ],
       "relatedStudyIds": [],

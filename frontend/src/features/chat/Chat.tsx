@@ -82,9 +82,9 @@ function MessageView({
             <p className="attachment-history">
               <BookOpen aria-hidden="true" />
               {message.attachments.map((a) => a.name).join(', ')} ·{' '}
-              {message.generation === 'scripted-demo'
-                ? 'local metadata only'
-                : 'uploaded research document'}
+              {message.attachments.every((attachment) => attachment.status === 'uploaded')
+                ? 'uploaded research document'
+                : 'local attachment metadata'}
             </p>
           ) : null}
           {message.context.simulationContext ? (
