@@ -395,7 +395,11 @@ export default function Composer({
         </p>
       ) : null}
       <p className="sr-only" role="status">
-        {busy ? 'Preparing a scripted response…' : ''}
+        {busy
+          ? api.mode === 'demo'
+            ? 'Preparing a scripted response…'
+            : 'Preparing your research response…'
+          : ''}
       </p>
     </form>
   )
