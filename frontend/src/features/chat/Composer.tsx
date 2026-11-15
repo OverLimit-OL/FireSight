@@ -119,6 +119,24 @@ export default function Composer({
     const controller = new AbortController()
     abort.current = controller
     try {
+      const uploaded = await Promise.all(
+        attachments.map(async (attachment) => {
+          if (api.mode !== 'http' || attachment.status === 'uploaded') return attachment
+          const file = staged.current.get(attachment.id)
+          if (!file) throw new Error('Reselect the attachment before sending.')
+          const form = new FormData()
+          form.append('file', file)
+          const response = await fetch('/api/v1/files', {
+            method: 'POST',
+            body: form,
+            signal: controller.signal,
+          })
+          const result = await response.json()
+          if (!response.ok) throw new Error(result.error?.message ?? 'Upload failed')
+          return { ...attachment, status: 'uploaded' as const, serverFileId: result.data.id }
+        }),
+      )
+      setAttachments(uploaded)
       const record =
         conversation ??
         created.current ??
@@ -129,7 +147,7 @@ export default function Composer({
         {
           text,
           context,
-          localAttachments: attachments,
+          localAttachments: uploaded,
           clientMessageId: operation.current,
           revision: record.revision,
         },
@@ -351,7 +369,7 @@ export default function Composer({
         <span>
           {api.mode === 'demo'
             ? 'Demo responses are scripted. Files are staged locally and never processed.'
-            : 'File upload is not enabled. Staged files must be removed before sending.'}
+            : 'Files are uploaded when you send. Relevant text is shared with Gemini.'}
         </span>
         <span className="mono">PDF · CSV · TXT · JSON</span>
       </div>

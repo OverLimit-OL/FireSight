@@ -269,7 +269,7 @@ function Sidebar({ close, mobile = false }: { close?: () => void; mobile?: boole
           <>
             <div className="small-label">
               <span className="status-square" />
-              {api.mode === 'demo' ? 'Local demonstration' : 'Flask API mode'}
+              {api.mode === 'demo' ? 'Local demonstration' : 'Connected workspace'}
             </div>
             <p>
               {api.mode === 'demo'
@@ -365,6 +365,7 @@ export default function Shell() {
             <span>{section}</span>
           </div>
           <div className="header-actions">
+            {api.mode === 'http' ? <a href="/setup">Gemini setup</a> : null}
             <span className="mode-label">
               {api.mode === 'demo' ? 'Demo · local only' : 'API mode'}
             </span>

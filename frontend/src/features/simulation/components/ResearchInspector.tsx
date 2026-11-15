@@ -1,3 +1,4 @@
+import { api } from '@/app/data'
 import { useState, useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { z } from 'zod'
@@ -113,7 +114,71 @@ export default function ResearchInspector({
     selectedEntityId: selectedId,
     step: frame?.coordinate.value ?? null,
   }
-  function ask(text: string) {
+  const [requestError, setRequestError] = useState('')
+  const [sending, setSending] = useState(false)
+  async function ask(text: string) {
+    if (sending) return
+    if (api.mode === 'http') {
+      setSending(true)
+      setRequestError('')
+      try {
+        const key = `firesight:http:copilot:${sessionId}`
+        const existing = localStorage.getItem(key)
+        const researchContext = {
+          studyIds,
+          datasetIds: [],
+          labSnapshot: null,
+          simulationContext: {
+            schemaVersion: 'simulation.v1' as const,
+            id: crypto.randomUUID(),
+            capturedAt: new Date().toISOString(),
+            sessionId,
+            sessionTitle,
+            modelId: model.id,
+            modelVersion: model.version,
+            revisionId: revision?.id ?? '',
+            configurationDigest: revision?.configurationDigest ?? '',
+            runId: run?.id ?? null,
+            frameId: frame?.id ?? null,
+            timestamp: frame?.coordinate ?? null,
+            visualization,
+            selectedComponentId: component?.id ?? null,
+            selectedMeasurement: measurement ?? null,
+            origin: model.origin,
+            studyIds,
+            evidenceIds: [],
+            limitations: model.limitations,
+          },
+        }
+        const conversation = existing
+          ? await api.getConversation(existing)
+          : await api.createConversation(researchContext, sessionTitle)
+        localStorage.setItem(key, conversation.id)
+        const result = await api.sendMessage(conversation.id, {
+          text,
+          context: researchContext,
+          localAttachments: [],
+          clientMessageId: crypto.randomUUID(),
+          revision: conversation.revision,
+        })
+        setMessages((previous) => [
+          ...previous,
+          { id: result.userMessage.id, role: 'user', text, context },
+          {
+            id: result.assistantMessage.id,
+            role: 'assistant',
+            text: result.assistantMessage.markdown,
+            context,
+          },
+        ])
+        setQuestion('')
+      } catch (error) {
+        setRequestError(error instanceof Error ? error.message : 'Request failed')
+      } finally {
+        setSending(false)
+      }
+      return
+    }
     if (!text.trim()) return
     const answer =
       text === 'Explain selected component'
@@ -238,7 +303,19 @@ export default function ResearchInspector({
           </span>
           {studyIds.length ? <span>References: {studyIds.join(', ').toUpperCase()}</span> : null}
         </div>
-        <p className="copilot-demo-label">Demo conversation · no LLM connected</p>
+        <p className="copilot-demo-label">
+          {api.mode === 'demo'
+            ? 'Demo conversation · no LLM connected'
+            : sending
+              ? 'Gemini is responding…'
+              : 'Gemini · source-aware research'}
+        </p>
+        {requestError ? <p role="alert">{requestError}</p> : null}
+        {api.mode === 'http' && localStorage.getItem(`firesight:http:copilot:${sessionId}`) ? (
+          <Link to={`/chat/${localStorage.getItem(`firesight:http:copilot:${sessionId}`)}`}>
+            Open this conversation in Chat
+          </Link>
+        ) : null}
         <div className="copilot-prompts">
           {['Explain selected component', 'Explain this state', 'What evidence is missing?'].map(
             (prompt) => (
