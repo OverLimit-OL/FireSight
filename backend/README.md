@@ -33,3 +33,9 @@ The Dockerfile builds the frontend and starts Uvicorn on `$PORT`. Keep one repli
 Back up the SQLite database with SQLite's online backup API and copy `encryption.key` separately into protected storage. Both are required for recovery. Automated backup scheduling is not configured by this PoC. Shared credentials, retention/deletion controls, rate limits and multi-user access should be upgraded before opening this workspace to a wider audience.
 
 Run backend checks with `.venv/bin/python -m unittest discover -s backend -p 'test_*.py'`.
+
+## Account login update
+
+Railway now enables account registration and HTTP-only cookie sessions. Each new account uses a separate SQLite workspace and encrypted Gemini key. Existing workspace credentials can sign in as `firesight` to access earlier records. Local development retains its existing authentication mode unless `FIRESIGHT_ACCOUNTS=1` is set.
+
+New accounts see a Gemini setup dialog with a Google AI Studio link and a skip option. Google sign-in appears after `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` are configured in Railway. Create a Web application OAuth client with redirect URI `https://firesight-production.up.railway.app/auth/google/callback`. Email verification and password recovery are pending.

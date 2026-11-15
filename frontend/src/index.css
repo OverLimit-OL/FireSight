@@ -331,13 +331,22 @@
   --sidebar-width: 80px;
 }
 @keyframes placeholder-typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes placeholder-fade {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.4; }
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.4;
+  }
 }
 
 .research-composer textarea::placeholder {
@@ -4124,4 +4133,64 @@
 /* Keep camera controls clear of the compact preview's provenance caption. */
 .creation-aside .camera-rail {
   top: 70px;
+}
+.gemini-onboarding {
+  max-width: 500px;
+  padding: 30px;
+  gap: 24px;
+}
+.gemini-onboarding [data-slot='dialog-title'] {
+  font-size: 24px;
+  line-height: 1.3;
+}
+.setup-symbol {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--secondary);
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+.setup-guide {
+  padding: 18px;
+  background: var(--secondary);
+  border-radius: 10px;
+  font-size: 13px;
+}
+.setup-guide p,
+.setup-privacy {
+  color: var(--muted-foreground);
+  line-height: 1.7;
+}
+.setup-guide p {
+  margin: 8px 0 12px;
+}
+.setup-guide a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.gemini-onboarding label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+.setup-key-input {
+  display: flex;
+  gap: 4px;
+}
+.setup-key-input input {
+  min-width: 0;
+  flex: 1;
+}
+.setup-privacy {
+  font-size: 12px;
+  margin: 12px 0 22px;
+}
+.setup-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
 }

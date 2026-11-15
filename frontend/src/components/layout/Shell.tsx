@@ -1,3 +1,4 @@
+import AccountControls from './AccountControls'
 import { useEffect, useRef, useState } from 'react'
 import {
   Link,
@@ -365,7 +366,7 @@ export default function Shell() {
             <span>{section}</span>
           </div>
           <div className="header-actions">
-            {api.mode === 'http' ? <a href="/setup">Gemini setup</a> : null}
+            {api.mode === 'http' ? <AccountControls /> : null}
             <span className="mode-label">
               {api.mode === 'demo' ? 'Demo · local only' : 'API mode'}
             </span>
@@ -401,8 +402,7 @@ export default function Shell() {
         </main>
         <footer className="app-footer">
           <span>
-            Fire-XII <span aria-hidden="true">/</span> Scientific intelligence for space fire
-            safety
+            Fire-XII <span aria-hidden="true">/</span> Scientific intelligence for space fire safety
           </span>
           <span>Provenance before prediction</span>
         </footer>

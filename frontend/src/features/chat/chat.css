@@ -1,0 +1,180 @@
+.chat-page {
+  max-width: 1080px;
+  height: calc(100dvh - 68px);
+  min-height: 0;
+  padding: 20px 36px 14px;
+}
+.chat-page .back-link {
+  margin-bottom: 12px;
+  font-size: 12px;
+}
+.chat-page .chat-title {
+  padding-bottom: 16px;
+  gap: 20px;
+}
+.chat-page .chat-title .eyebrow {
+  font-size: 11px;
+  text-transform: none;
+  letter-spacing: 0;
+  margin: 0;
+}
+.chat-page .chat-title h1 {
+  margin-top: 6px;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.35;
+  letter-spacing: -0.025em;
+}
+.chat-page .chat-title [data-slot='badge'] {
+  border: 0;
+  background: var(--secondary);
+  color: var(--muted-foreground);
+  font-family: inherit;
+  font-size: 11px;
+  padding: 6px 10px;
+}
+.chat-page .conversation-document {
+  max-width: none;
+}
+.chat-page [data-slot='message-scroller-viewport'] {
+  scrollbar-width: thin;
+  scrollbar-color: var(--border) transparent;
+  scroll-padding-block: 24px;
+}
+.chat-page [data-slot='message-scroller-content'] {
+  padding: 26px 16px 24px 0;
+}
+.chat-page .research-message {
+  padding: 0 0 30px;
+  border: 0;
+}
+.chat-page .research-message [data-slot='message-content'] {
+  gap: 0;
+}
+.chat-page .research-message.user {
+  padding: 0 0 28px;
+}
+.chat-page .research-message.user [data-slot='message-content'] {
+  width: fit-content;
+  max-width: 85%;
+  margin-left: auto;
+  background: var(--secondary);
+  border: 1px solid var(--border);
+  border-radius: 14px 14px 3px 14px;
+  padding: 14px 20px;
+}
+.chat-page .message-byline {
+  margin-bottom: 12px;
+  font-size: 12px;
+  gap: 9px;
+}
+.chat-page .message-byline strong {
+  font-weight: 600;
+}
+.chat-page .user .message-byline {
+  margin-bottom: 4px;
+  color: var(--muted-foreground);
+}
+.chat-page .user .message-byline > svg {
+  display: none;
+}
+.chat-page .assistant-symbol {
+  border-radius: 7px;
+  border-color: color-mix(in srgb, var(--primary) 30%, var(--border));
+  background: color-mix(in srgb, var(--primary) 8%, transparent);
+  width: 29px;
+  height: 29px;
+}
+.chat-page .message-reading[data-slot='bubble-content'] {
+  padding: 0;
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 78ch;
+}
+.chat-page .message-reading p {
+  margin: 0 0 14px;
+}
+.chat-page .message-reading p:last-child {
+  margin-bottom: 0;
+}
+.chat-page .message-reading li {
+  margin-bottom: 8px;
+}
+.chat-page .message-reading h2 {
+  font-size: 22px;
+  margin: 24px 0 12px;
+}
+.chat-page .message-reading h3 {
+  margin: 20px 0 10px;
+  font-size: 17px;
+}
+.chat-page .message-studies {
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.chat-page .message-evidence {
+  margin-top: 20px;
+}
+.chat-page .composer-wrap {
+  margin-top: 0;
+}
+.chat-page .research-composer[data-slot='input-group'] {
+  border-radius: 14px;
+  border-color: var(--border);
+  box-shadow: 0 6px 24px rgb(0 0 0 / 8%);
+  transition: border-color 0.15s;
+}
+.chat-page .research-composer:focus-within {
+  border-color: var(--primary);
+}
+.chat-page .research-composer textarea[data-slot='input-group-control'] {
+  min-height: 58px;
+  max-height: 120px;
+  padding: 16px 18px 8px;
+  font-size: 14px;
+}
+.chat-page .context-row {
+  padding: 4px 16px;
+}
+.chat-page .composer-toolbar[data-slot='input-group-addon'] {
+  padding: 8px 12px 12px;
+}
+.chat-page .composer-toolbar button {
+  font-size: 12px;
+}
+.chat-page .composer-help {
+  margin-top: 8px;
+  font-size: 10px;
+}
+@media (max-width: 767px) {
+  .chat-page {
+    height: calc(100dvh - 60px);
+    padding: 14px 16px 10px;
+    min-height: 0;
+  }
+  .chat-page .back-link {
+    display: none;
+  }
+  .chat-page .chat-title {
+    padding-bottom: 14px;
+  }
+  .chat-page .chat-title [data-slot='badge'] {
+    display: none;
+  }
+  .chat-page .research-message.user [data-slot='message-content'] {
+    max-width: 94%;
+    padding: 12px 14px;
+  }
+  .chat-page .message-reading[data-slot='bubble-content'] {
+    font-size: 14px;
+  }
+  .chat-page [data-slot='message-scroller-content'] {
+    padding-top: 20px;
+    padding-right: 8px;
+  }
+  .chat-page .composer-help {
+    line-height: 1.5;
+  }
+}

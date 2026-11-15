@@ -1,3 +1,4 @@
+import './chat.css'
 import {
   MessageScrollerProvider,
   MessageScroller,
@@ -56,7 +57,7 @@ function MessageView({
                 F.
               </span>
             )}
-            <strong>{message.role === 'user' ? 'Your question' : 'Fire-XII research note'}</strong>
+            <strong>{message.role === 'user' ? 'You' : 'Fire-XII'}</strong>
             {message.generation === 'scripted-demo' ? (
               <Badge variant="outline">Scripted demonstration</Badge>
             ) : null}
@@ -154,7 +155,7 @@ function MessageView({
               ))}
             </section>
           ) : null}
-          {message.studyIds.length ? (
+          {message.role === 'assistant' && message.studyIds.length ? (
             <div className="message-studies">
               <span>Continue with</span>
               {message.studyIds.map((id) => (
@@ -239,11 +240,11 @@ export default function Chat() {
           <h1 tabIndex={-1}>{record.title}</h1>
         </div>
         <Badge variant="outline">
-          {api.mode === 'demo' ? 'Saved on this device' : 'API conversation'}
+          {api.mode === 'demo' ? 'Saved on this device' : 'Connected workspace'}
         </Badge>
       </div>
       <div className="conversation-document">
-        <MessageScrollerProvider autoScroll defaultScrollPosition="start">
+        <MessageScrollerProvider autoScroll defaultScrollPosition="end">
           <MessageScroller>
             <MessageScrollerViewport aria-label="Research conversation transcript">
               <MessageScrollerContent>

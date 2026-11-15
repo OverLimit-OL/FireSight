@@ -16,6 +16,7 @@ from fastapi import FastAPI, Request, HTTPException, UploadFile, File
 from fastapi.responses import JSONResponse, FileResponse, HTMLResponse, RedirectResponse
 from fastapi.staticfiles import StaticFiles
 from pypdf import PdfReader
+from backend import auth
 
 ROOT = Path(__file__).parent
 DATA = Path(os.getenv("DATA_DIR", str(ROOT / "storage")))
@@ -27,7 +28,15 @@ app = FastAPI(title="FireSight API", docs_url=None, redoc_url=None)
 
 @contextmanager
 def db():
-    connection = sqlite3.connect(DATA / "firesight.db", timeout=15)
+    user = auth.account_id.get()
+    filename = f"account-{user}.db" if user and user != "legacy" else "firesight.db"
+    connection = sqlite3.connect(DATA / filename, timeout=15)
+    connection.execute(
+        "CREATE TABLE IF NOT EXISTS records (kind TEXT,id TEXT,payload TEXT,PRIMARY KEY(kind,id))"
+    )
+    connection.execute(
+        "CREATE TABLE IF NOT EXISTS settings (name TEXT PRIMARY KEY,value TEXT)"
+    )
     connection.execute("PRAGMA journal_mode=WAL")
     try:
         yield connection
@@ -102,6 +111,8 @@ if not key_path.exists():
     key_path.write_bytes(Fernet.generate_key())
     key_path.chmod(0o600)
 cipher = Fernet(key_path.read_bytes())
+auth.configure(DATA, cipher)
+app.include_router(auth.router)
 
 
 @app.exception_handler(HTTPException)
@@ -115,28 +126,43 @@ async def errors(request, error):
 async def access(request: Request, call_next):
     if request.url.path == "/health":
         return await call_next(request)
-    password = os.getenv("FIRESIGHT_PASSWORD_HASH", "")
-    if password:
-        import base64
+    token = None
+    if auth.enabled():
+        user = auth.identity(request)
+        public = request.url.path in (
+            "/login",
+            "/register",
+        ) or request.url.path.startswith("/auth/")
+        if not user and not public:
+            if request.url.path.startswith("/api/"):
+                return JSONResponse({"error": {"message": "Sign in to continue"}}, 401)
+            return RedirectResponse("/login", 303)
+        token = auth.account_id.set(user)
+    else:
+        password = os.getenv("FIRESIGHT_PASSWORD_HASH", "")
+        if password:
+            import base64
 
-        header = request.headers.get("authorization", "")
-        try:
-            user, supplied = (
-                base64.b64decode(header.removeprefix("Basic ")).decode().split(":", 1)
-            )
-        except Exception:
-            user, supplied = "", ""
-        if user != "firesight" or not secrets.compare_digest(
-            hashlib.scrypt(
-                supplied.encode(), salt=b"firesight-login-v1", n=16384, r=8, p=1
-            ).hex(),
-            password,
-        ):
-            return JSONResponse(
-                {"error": {"message": "Sign in to FireSight"}},
-                401,
-                headers={"WWW-Authenticate": 'Basic realm="FireSight"'},
-            )
+            header = request.headers.get("authorization", "")
+            try:
+                user, supplied = (
+                    base64.b64decode(header.removeprefix("Basic "))
+                    .decode()
+                    .split(":", 1)
+                )
+            except Exception:
+                user, supplied = "", ""
+            if user != "firesight" or not secrets.compare_digest(
+                hashlib.scrypt(
+                    supplied.encode(), salt=b"firesight-login-v1", n=16384, r=8, p=1
+                ).hex(),
+                password,
+            ):
+                return JSONResponse(
+                    {"error": {"message": "Sign in to FireSight"}},
+                    401,
+                    headers={"WWW-Authenticate": 'Basic realm="FireSight"'},
+                )
     if request.method not in ("GET", "HEAD", "OPTIONS"):
         origin = request.headers.get("origin")
         expected_origin = os.getenv("PUBLIC_ORIGIN") or (
@@ -148,9 +174,15 @@ async def access(request: Request, call_next):
             return JSONResponse(
                 {"error": {"message": "Cross-origin writes are disabled"}}, 403
             )
-    response = await call_next(request)
+    try:
+        response = await call_next(request)
+    finally:
+        if token is not None:
+            auth.account_id.reset(token)
     response.headers["X-Content-Type-Options"] = "nosniff"
-    if request.url.path.startswith(("/setup", "/api/")):
+    if request.url.path.startswith(
+        ("/setup", "/api/", "/auth/", "/login", "/register")
+    ):
         response.headers["Cache-Control"] = "no-store"
     return response
 
@@ -183,6 +215,10 @@ async def save_key(request: Request):
     if len(key) < 20 or len(key) > 300:
         raise HTTPException(422, "Enter a valid Gemini API key.")
     setting("gemini_key", cipher.encrypt(key.encode()).decode())
+    if form.get("embedded"):
+        return HTMLResponse(
+            "<script>parent.postMessage('firesight-key-saved', location.origin)</script><p>Gemini is connected. You can return to your research.</p>"
+        )
     return RedirectResponse("/setup", 303)
 
 
