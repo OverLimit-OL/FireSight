@@ -22,7 +22,7 @@ Local development is unauthenticated unless `FIRESIGHT_PASSWORD_HASH` is configu
 
 Open `/setup`, follow the Google AI Studio link, create a key and save it. The password input never returns the saved key. Keys use authenticated Fernet encryption; the encryption key is a mode-0600 file on the persistent volume. Hashing a Gemini key would make it unusable for provider requests. This protects database-only disclosure; someone with server/volume access can decrypt it.
 
-The default provider model is `gemini-2.5-flash`, configurable with `GEMINI_MODEL`. Selected study metadata, conversation history, research context and uploaded text are sent to Google for each request. No key means an explicit unavailable error, never a mock answer. Provider errors also remain visible. Validate a real response after adding your key.
+The default provider model is `gemini-3.5-flash-lite`, configurable with `GEMINI_MODEL`. Selected study metadata, conversation history, research context and uploaded text are sent to Google for each request. No key means an explicit unavailable error, never a mock answer. Provider errors also remain visible. Validate a real response after adding your key.
 
 PDF/TXT/CSV/JSON uploads are limited to 10 MiB and PDFs to 200 pages. Extracted text is stored, not original files; up to 20,000 characters per attachment enter the prompt. This is bounded context, not a vector-search/RAG pipeline. Evidence links indicate overview provenance, not independent scientific validation.
 
