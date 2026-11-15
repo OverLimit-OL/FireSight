@@ -15,6 +15,7 @@ const Lab = lazy(() => import('@/features/lab/Lab'))
 const LabOverview = lazy(() => import('@/features/simulation/LabOverview'))
 const NewExperiment = lazy(() => import('@/features/simulation/NewExperiment'))
 const Studio = lazy(() => import('@/features/simulation/Studio'))
+const Guide = lazy(() => import('@/features/guide/Guide'))
 const Settings = lazy(() => import('@/features/settings/Settings'))
 class AppErrorBoundary extends Component<{ children: ReactNode }, { error: string }> {
   state = { error: '' }
@@ -56,6 +57,7 @@ export default function App() {
                   <Route path="lab/new" element={<NewExperiment />} />
                   <Route path="lab/studio/:simulationSessionId" element={<Studio />} />
                   <Route path="lab/:sessionId" element={<Lab />} />
+                  <Route path="guide" element={<Guide />} />
                   <Route path="settings" element={<Settings />} />
                   <Route
                     path="*"

@@ -1,0 +1,109 @@
+.guide-page {
+  max-width: 1080px;
+}
+.guide-intro {
+  padding-block: 24px 38px;
+}
+.guide-intro h1 {
+  font-size: clamp(30px, 4vw, 46px);
+  letter-spacing: -0.045em;
+  margin: 12px 0 20px;
+}
+.guide-intro > p:last-child {
+  color: var(--muted-foreground);
+  max-width: 64ch;
+  line-height: 1.85;
+}
+.guide-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 48px;
+}
+.guide-nav a {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  border-radius: 999px;
+  padding: 10px 15px;
+  background: var(--secondary);
+  font-size: 12px;
+}
+.guide-topic {
+  background: var(--card);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 30px;
+  scroll-margin-top: 30px;
+  box-shadow:
+    inset 0 1px rgb(255 255 255 / 6%),
+    0 0 0 5px color-mix(in srgb, var(--card) 40%, transparent);
+}
+.guide-topic-heading {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+.guide-topic-heading > svg {
+  color: var(--primary);
+  margin-top: 4px;
+  flex: none;
+}
+.guide-topic h2 {
+  font-size: 23px;
+  letter-spacing: -0.025em;
+}
+.guide-topic-heading p {
+  color: var(--muted-foreground);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-top: 10px;
+  max-width: 66ch;
+}
+.guide-steps {
+  margin: 0 0 26px 44px;
+}
+.guide-steps details {
+  border-top: 1px solid var(--border);
+  padding: 16px 0;
+}
+.guide-steps summary {
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+}
+.guide-steps details p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--muted-foreground);
+  margin: 14px 0 0;
+  max-width: 75ch;
+}
+.guide-limits {
+  padding: 20px 0 36px;
+}
+.guide-limits p {
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--muted-foreground);
+  margin-top: 12px;
+  max-width: 80ch;
+}
+@media (max-width: 767px) {
+  .guide-topic {
+    padding: 24px 18px;
+  }
+  .guide-topic-heading {
+    gap: 12px;
+  }
+  .guide-steps {
+    margin-left: 0;
+  }
+  .guide-topic h2 {
+    font-size: 20px;
+  }
+  .guide-nav {
+    margin-bottom: 32px;
+  }
+}

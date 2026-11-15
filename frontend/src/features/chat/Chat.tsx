@@ -81,8 +81,10 @@ function MessageView({
           {message.attachments.length ? (
             <p className="attachment-history">
               <BookOpen aria-hidden="true" />
-              {message.attachments.map((a) => a.name).join(', ')} · local metadata only; file
-              contents not processed
+              {message.attachments.map((a) => a.name).join(', ')} ·{' '}
+              {message.generation === 'scripted-demo'
+                ? 'local metadata only'
+                : 'uploaded research document'}
             </p>
           ) : null}
           {message.context.simulationContext ? (
@@ -127,7 +129,7 @@ function MessageView({
               <div className="evidence-caption">
                 <Fingerprint aria-hidden="true" />
                 <span>Evidence trail</span>
-                <span>Research objectives · not experimental findings</span>
+                <span>Source-linked research context</span>
               </div>
               {message.evidence.map((e) => (
                 <div className="evidence-record" key={e.id}>

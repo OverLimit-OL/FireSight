@@ -1,0 +1,38 @@
+[
+  {
+    "id": "flex-approach",
+    "studyId": "flex",
+    "sourceUrl": "https://gipoc.grc.nasa.gov/wp/fcf-cir/flex/",
+    "title": "NASA Glenn FLEX overview",
+    "retrievedAt": "2026-11-15",
+    "locator": "FLEX Overview",
+    "kind": "agency overview paraphrase",
+    "text": "FLEX examines inert-gas suppression in microgravity and the oxygen boundary for sustained burning. Its near-extinction diffusion-flame studies address fuel/gas transport and reaction kinetics. These experiments support transport and chemistry model development.",
+    "limitations": "Program overview. No run-level numerical data are included.",
+    "preparation": "SI-assisted paraphrase prepared with OpenAI Codex; original source linked for review."
+  },
+  {
+    "id": "flex-droplet-method",
+    "studyId": "flex",
+    "sourceUrl": "https://www1.grc.nasa.gov/wp-content/uploads/FLEX_EIRD_v4.pdf",
+    "title": "FLEX Research Requirements Document",
+    "retrievedAt": "2026-11-15",
+    "locator": "Section 4, Flight Experiment Description",
+    "kind": "experimental design paraphrase",
+    "text": "The proposed experimental geometry uses a fuel droplet burning in a quiet, premixed ambient containing a gaseous suppressant. Approximate spherical symmetry helps isolate the roles of transport, radiation and chemical reactions near extinction. The design identifies droplet burning rate, extinction, flame radiation and soot characteristics as quantities relevant to evaluating models and suppression.",
+    "limitations": "Design document. Planned diagnostics and variables do not establish that every flight run measured them.",
+    "preparation": "SI-assisted paraphrase prepared with OpenAI Codex; original source linked for review."
+  },
+  {
+    "id": "flex-cool-flames",
+    "studyId": "flex",
+    "sourceUrl": "https://www.nasa.gov/missions/station/iss-research/youre-hot-then-youre-cold/",
+    "title": "NASA — You’re Hot Then You’re Cold",
+    "retrievedAt": "2026-11-15",
+    "locator": "Discovering cool flames",
+    "kind": "agency findings summary paraphrase",
+    "text": "NASA describes FLEX droplet experiments that revealed continuing low-temperature combustion after the visible flame appeared to extinguish. This cool-flame behavior shows why disappearance of visible luminosity alone does not establish that chemical reaction has ended.",
+    "limitations": "Qualitative agency summary. It supplies no numerical extinction threshold for a selected run.",
+    "preparation": "SI-assisted paraphrase prepared with OpenAI Codex; original source linked for review."
+  }
+]

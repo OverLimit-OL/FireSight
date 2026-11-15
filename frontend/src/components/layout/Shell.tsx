@@ -56,6 +56,7 @@ const navigation = [
   { to: '/resources', label: 'Resources', icon: BookOpen },
   { to: '/lab', label: 'Lab', icon: FlaskConical },
   { to: '/settings', label: 'Settings', icon: Settings2 },
+  { to: '/guide', label: 'Feature guide', icon: BookOpen },
 ]
 function Rename({ conversation }: { conversation: Conversation }) {
   const [open, setOpen] = useState(false)
@@ -296,13 +297,15 @@ export default function Shell() {
   const location = useLocation()
   const navigationType = useNavigationType()
   const lastRoute = useRef('')
-  const section = location.pathname.startsWith('/resources')
-    ? 'Resources'
-    : location.pathname.startsWith('/lab')
-      ? 'Lab'
-      : location.pathname.startsWith('/settings')
-        ? 'Settings'
-        : 'Research workspace'
+  const section = location.pathname.startsWith('/guide')
+    ? 'Feature guide'
+    : location.pathname.startsWith('/resources')
+      ? 'Resources'
+      : location.pathname.startsWith('/lab')
+        ? 'Lab'
+        : location.pathname.startsWith('/settings')
+          ? 'Settings'
+          : 'Research workspace'
   useEffect(() => {
     document.title = `${section} · Fire-XII`
     if (lastRoute.current === location.pathname && !location.hash) return

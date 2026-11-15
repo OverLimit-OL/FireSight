@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { KeyRound, ExternalLink, Eye, EyeOff, LogOut } from 'lucide-react'
 import { Button } from '@/components/ui/button'
@@ -58,8 +59,15 @@ export default function AccountControls() {
                 : 'Bring your Gemini API key to ask questions about studies, documents and your experiment.'}
             </DialogDescription>
           </DialogHeader>
+          <Link className="text-link" to="/guide" onClick={() => changeOpen(false)}>
+            New here? Explore the workspace guide
+          </Link>
           {saved ? (
-            <Button onClick={() => changeOpen(false)}>Start exploring</Button>
+            <Button asChild>
+              <Link to="/guide" onClick={() => changeOpen(false)}>
+                Explore the feature guide
+              </Link>
+            </Button>
           ) : (
             <>
               <div className="setup-guide">

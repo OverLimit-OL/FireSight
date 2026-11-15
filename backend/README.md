@@ -39,3 +39,11 @@ Run backend checks with `.venv/bin/python -m unittest discover -s backend -p 'te
 Railway now enables account registration and HTTP-only cookie sessions. Each new account uses a separate SQLite workspace and encrypted Gemini key. Existing workspace credentials can sign in as `firesight` to access earlier records. Local development retains its existing authentication mode unless `FIRESIGHT_ACCOUNTS=1` is set.
 
 New accounts see a Gemini setup dialog with a Google AI Studio link and a skip option. Google sign-in appears after `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` are configured in Railway. Create a Web application OAuth client with redirect URI `https://firesight-production.up.railway.app/auth/google/callback`. Email verification and password recovery are pending.
+
+## Conversation reliability update
+
+Chat transport and bounded context preparation live in `backend/research.py`. Gemini receives a separate system instruction, up to 20 role-preserving history messages within a 48,000-character history budget, selected studies, curated NASA-source paraphrases and up to eight attached documents. Each document contributes up to 20,000 characters. Earlier uploads remain available for follow-ups. FLEX has documented approach and qualitative-source context. These curated notes are SI-assisted paraphrases with source URLs and retrieval metadata, rather than a full-paper index.
+
+Message inputs are validated. Conversations serialize concurrent generation within the single-worker service, while database revision checks reject stale writes. Client message IDs prevent duplicate committed replies. Creation operation IDs are stored atomically and reject payload reuse. Provider quota, key, timeout, empty response, truncation and model errors return actionable messages without persisting partial exchanges. Temporary provider HTTP errors receive one bounded retry.
+
+Implementation and documentation were assisted by OpenAI Codex. Remaining MVP work includes email verification, password recovery, rate limiting, scheduled backups and broader scientific-source ingestion. Continue using one Uvicorn worker with the persistent volume until coordination and storage are migrated for multiple workers.
