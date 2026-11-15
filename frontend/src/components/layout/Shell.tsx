@@ -318,6 +318,31 @@ export default function Shell() {
     }
   }, [location.pathname, location.hash, section, navigationType])
   useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible')
+            observer.unobserve(entry.target)
+          }
+        })
+      },
+      { threshold: 0.08 },
+    )
+    const timer = setTimeout(() => {
+      document
+        .querySelectorAll('.page-heading, .home-intro, .study-row, .settings-section')
+        .forEach((element) => {
+          element.classList.add('reveal-surface')
+          observer.observe(element)
+        })
+    }, 150)
+    return () => {
+      clearTimeout(timer)
+      observer.disconnect()
+    }
+  }, [location.pathname])
+  useEffect(() => {
     const listener = () => queryClient.invalidateQueries()
     window.addEventListener('storage', listener)
     return () => window.removeEventListener('storage', listener)
