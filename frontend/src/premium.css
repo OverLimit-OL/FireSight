@@ -303,3 +303,8 @@ svg.lucide {
   gap: 20px;
   border-top: 0;
 }
+[data-motion='reduce'] .reveal-surface {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
