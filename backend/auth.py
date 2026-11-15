@@ -92,29 +92,39 @@ def auth_page(register=False, error=""):
         if os.getenv("GOOGLE_CLIENT_ID") and os.getenv("GOOGLE_CLIENT_SECRET")
         else ""
     )
-    return HTMLResponse(
-        """<!doctype html><html lang="en"><head><meta name="viewport" content="width=device-width,initial-scale=1"><title>"""
-        + title
-        + """ · Fire-XII</title><style>
-    *{box-sizing:border-box}body{margin:0;background:#11181d;color:#e7edf0;font:15px system-ui;min-height:100dvh;display:grid;place-items:center;padding:24px}main{width:100%;max-width:420px}.brand{font-size:23px;font-weight:600;margin-bottom:48px}.brand span{color:#e6ac76}h1{font-size:30px;letter-spacing:-1px;margin:0 0 10px}p{color:#a8b7c1;line-height:1.7;margin-bottom:28px}label{display:block;margin:18px 0 8px;font-size:13px}input,button,.google{font:inherit;border-radius:8px;width:100%;padding:13px 15px}input{background:#1b252c;border:1px solid #3c4b55;color:inherit}input:focus{outline:2px solid #e6ac76;outline-offset:2px}button{background:#e6ac76;border:0;color:#17191a;font-weight:600;margin-top:26px;cursor:pointer}a{color:#e6ac76;text-decoration:none}.google{display:block;text-align:center;border:1px solid #465661;color:#e7edf0;margin-top:28px}.divider{text-align:center;color:#91a0aa;font-size:12px;margin:22px 0}.error{color:#ffb7ad;background:#382527;padding:12px;border-radius:8px}.switch{text-align:center;margin-top:24px;font-size:13px}</style></head><body><main><div class="brand"><span>F.</span> Fire-XII</div><h1>"""
-        + title
-        + """</h1><p>Your research, experiments and evidence in one workspace.</p>"""
-        + (f'<p class="error" role="alert">{html.escape(error)}</p>' if error else "")
-        + google
-        + f'''<form method="post" action="/auth/{target}"><label for="email">Email address</label><input id="email" name="email" type="text" autocomplete="username" required maxlength="254"><label for="password">Password</label><input id="password" name="password" type="password" autocomplete="{"new-password" if register else "current-password"}" required {'minlength="10"' if register else ""} maxlength="128">'''
-        + (
-            '<small style="color:#a8b7c1">Use at least 10 characters.</small>'
-            if register
-            else ""
-        )
-        + f"""<button>{"Create account" if register else "Sign in"}</button></form><p class="switch">"""
-        + (
-            'Already have an account? <a href="/login">Sign in</a>'
-            if register
-            else 'New to Fire-XII? <a href="/register">Create an account</a>'
-        )
-        + "</p></main></body></html>"
-    )
+    from pathlib import Path
+
+    template = Path(__file__).parent / "public/auth.html"
+    values = {
+        "title": title,
+        "intro": "Create a workspace for your research and experiments."
+        if register
+        else "Sign in to pick up your research where you left off.",
+        "target": target,
+        "error": f'<p class="error" role="alert">{html.escape(error)}</p>'
+        if error
+        else "",
+        "google": google,
+        "autocomplete": "new-password" if register else "current-password",
+        "minlength": 'minlength="10"' if register else "",
+        "password_placeholder": "Create a strong password"
+        if register
+        else "Enter your password",
+        "hint": '<p class="form-hint">Use at least 10 characters.</p>'
+        if register
+        else "",
+        "submit": "Create account" if register else "Sign in",
+        "switch": 'Already have an account? <a href="/login">Sign in</a>'
+        if register
+        else 'New to Fire-XII? <a href="/register">Create an account</a>',
+        "footnote": "You’ll be invited to connect your Gemini API key after registration. You can also set it up later."
+        if register
+        else "Your research is saved to your account. Your Gemini API key is encrypted on the server.",
+    }
+    markup = template.read_text()
+    for name, value in values.items():
+        markup = markup.replace("{{" + name + "}}", value)
+    return HTMLResponse(markup)
 
 
 @router.get("/login")

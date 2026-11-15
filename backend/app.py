@@ -130,9 +130,11 @@ async def access(request: Request, call_next):
     if auth.enabled():
         user = auth.identity(request)
         public = request.url.path in (
+            "/",
+            "/welcome",
             "/login",
             "/register",
-        ) or request.url.path.startswith("/auth/")
+        ) or request.url.path.startswith(("/auth/", "/public/"))
         if not user and not public:
             if request.url.path.startswith("/api/"):
                 return JSONResponse({"error": {"message": "Sign in to continue"}}, 401)
@@ -647,13 +649,23 @@ async def message(key, body):
     }
 
 
+app.mount("/public", StaticFiles(directory=ROOT / "public"), name="public")
+
+
+@app.get("/welcome")
+def welcome():
+    return FileResponse(ROOT / "public/landing.html")
+
+
 DIST = Path(os.getenv("FRONTEND_DIST", str(ROOT.parent / "frontend/dist")))
 if (DIST / "assets").exists():
     app.mount("/assets", StaticFiles(directory=DIST / "assets"), name="assets")
 
 
 @app.get("/{path:path}")
-def frontend(path: str):
+def frontend(path: str, request: Request):
+    if not path and auth.enabled() and not auth.identity(request):
+        return FileResponse(ROOT / "public/landing.html")
     target = (DIST / path).resolve()
     if target.is_relative_to(DIST.resolve()) and target.is_file():
         return FileResponse(target)
