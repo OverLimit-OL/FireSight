@@ -1,1 +1,85 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{title}} · Fire-XII</title><link rel="stylesheet" href="/public/site.css"></head><body><header class="site-nav"><a class="brand" href="/"><span class="brand-mark">F.</span>Fire-XII.</a><a class="auth-nav-hint" href="/">← Back to overview</a></header><main class="auth-layout"><aside class="auth-story"><p class="kicker">Your scientific workspace</p><h2>Keep the question.<br>Follow the evidence.</h2><p>A place to connect combustion research, experimental context and the next question worth asking.</p><div class="auth-detail"><span aria-hidden="true">⌘</span><div><strong>Research with the context intact</strong><p>Your conversations, saved experiments and linked sources are ready when you return.</p></div></div></aside><section class="auth-form" aria-labelledby="auth-title"><h1 id="auth-title">{{title}}</h1><p class="intro">{{intro}}</p>{{error}}{{google}}<form method="post" action="/auth/{{target}}"><label for="email">Email address</label><input id="email" name="email" type="text" autocomplete="username" required maxlength="254" placeholder="you@example.com"><label for="password">Password</label><div class="password-field"><input id="password" name="password" type="password" autocomplete="{{autocomplete}}" required {{minlength}} maxlength="128" placeholder="{{password_placeholder}}"><button class="password-toggle" type="button" aria-label="Show password" onclick="const p=document.getElementById('password');const show=p.type==='password';p.type=show?'text':'password';this.textContent=show?'Hide':'Show';this.setAttribute('aria-label',show?'Hide password':'Show password')">Show</button></div>{{hint}}<button class="button submit" type="submit">{{submit}} <span aria-hidden="true">↗</span></button></form><p class="switch">{{switch}}</p><p class="auth-footnote">{{footnote}}</p></section></main></body></html>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>{{title}} · Fire-XII</title>
+    <link rel="stylesheet" href="/public/site.css" />
+  </head>
+  <body>
+    <header class="site-nav">
+      <a class="brand" href="/"><span class="brand-mark">F.</span>Fire-XII.</a
+      ><a class="auth-nav-hint" href="/">← Back to overview</a>
+    </header>
+    <main class="auth-layout">
+      <aside class="auth-story">
+        <p class="kicker">Your scientific workspace</p>
+        <h2>Keep the question.<br />Follow the evidence.</h2>
+        <p>
+          A place to connect combustion research, experimental context and the
+          next question worth asking.
+        </p>
+        <div class="auth-detail">
+          <span aria-hidden="true">⌘</span>
+          <div>
+            <strong>Research with the context intact</strong>
+            <p>
+              Your conversations, saved experiments and linked sources are ready
+              when you return.
+            </p>
+          </div>
+        </div>
+      </aside>
+      <section class="auth-form" aria-labelledby="auth-title">
+        <h1 id="auth-title">{{title}}</h1>
+        <p class="intro">{{intro}}</p>
+        {{error}}{{google}}
+        <form method="post" action="/auth/{{target}}">
+          <label for="email">Email address</label
+          ><input
+            id="email"
+            name="email"
+            type="text"
+            autocomplete="username"
+            required
+            maxlength="254"
+            placeholder="you@example.com"
+          /><label for="password">Password</label>
+          <div class="password-field">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="{{autocomplete}}"
+              required
+              {{minlength}}
+              maxlength="128"
+              placeholder="{{password_placeholder}}"
+            /><button
+              class="password-toggle"
+              type="button"
+              aria-label="Show password"
+              onclick="
+                const p = document.getElementById('password');
+                const show = p.type === 'password';
+                p.type = show ? 'text' : 'password';
+                this.textContent = show ? 'Hide' : 'Show';
+                this.setAttribute(
+                  'aria-label',
+                  show ? 'Hide password' : 'Show password',
+                );
+              "
+            >
+              Show
+            </button>
+          </div>
+          {{hint}}<button class="button submit" type="submit">
+            {{submit}} <span aria-hidden="true">↗</span>
+          </button>
+        </form>
+        <p class="switch">{{switch}}</p>
+        <p class="auth-footnote">{{footnote}}</p>
+      </section>
+    </main>
+  </body>
+</html>
